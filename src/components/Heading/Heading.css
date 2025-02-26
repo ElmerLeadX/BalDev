@@ -1,0 +1,23 @@
+@media(width < 768px){
+  h3 {
+    margin-bottom:12px !important;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    text-transform: none;
+    /* max-width: 500px; */
+    justify-self: center;
+  }
+}
+
+@media(width >= 768px){
+  h3 {
+    margin-bottom:12px !important;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    text-transform: none;
+    /* max-width: 500px; */
+    justify-self: center;
+  }
+}

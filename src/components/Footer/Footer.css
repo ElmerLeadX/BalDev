@@ -1,0 +1,22 @@
+@media(width < 768px){
+footer {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 25px 10%;
+  text-align: center;
+  & p {
+    font-size: 10px;
+  }
+}
+}
+@media(width >= 768px){
+  footer {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 25px 10%;
+    text-align: center;
+    & p {
+      font-size: 14px;
+    }
+  }
+  }

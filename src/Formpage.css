@@ -1,0 +1,48 @@
+@media(width < 768px)
+{
+  .form-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 0 42px;
+
+    & img{
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 14 / 9;
+      object-fit: cover;
+      object-position: center top;
+    }
+    
+    .form-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap:20px;
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+}
+@media(width >= 768px)
+{
+  .form-container{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    gap:135px;
+    margin-top: 67px;
+    
+    .form-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+}

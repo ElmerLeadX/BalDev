@@ -1,0 +1,82 @@
+form {
+  font-family: 'Harmonia Sans', sans-serif;
+  justify-self: center;
+  display: flex;
+  flex-direction:column;
+  gap:17px;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  min-height: 250px;
+  margin: 0 auto;
+  & div{
+    width: 100%;
+    & input[type="text"], input[type="email"] {
+      width: 100%;
+      height: 50px;
+      padding: 0 20px;
+      background:#f4f4f4;
+      border: 1px solid #000000;
+    }
+    & input[type="radio"] {
+      width: 20px;
+      height: 20px;
+    }
+    & input[type="radio"]:checked {
+      accent-color: #000000;
+    }
+    & input[type="text"]::placeholder, input[type="email"]::placeholder {
+      color: #232323;
+    }
+    & input[type="text"]:focus, input[type="email"]:focus {
+      outline: 1px solid #000000;
+    }
+  }
+  & button {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 296px;
+    height: 50px;
+    padding:25px;
+    font-family: 'Harmonia Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+}
+.gender{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  & label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}
+.subscribe{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  padding:19px 0;
+  width: 102%;
+  & input{
+    margin-top: 10px;
+    transform: scale(2);
+    accent-color: #000000;
+  }
+  & p{
+    font-size: 12px;
+    line-height: 16.8px;
+    font-family: 'Harmonia Sans', sans-serif;
+  }
+}

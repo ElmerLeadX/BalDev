@@ -1,0 +1,18 @@
+@media(width < 768px){
+  .section-video {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    margin-top: 14px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+  }
+}
+@media(width >= 768px){  
+  .section-video {
+    display: grid;
+    place-content: center;
+    width: 70%;
+    background-color: #ffffff;
+  }
+}

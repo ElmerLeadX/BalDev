@@ -1,0 +1,21 @@
+.section-gray {
+  /* display: grid;
+  grid-template-columns: 48% 48%;
+  grid-template-rows: 100%;
+  column-gap:4%;
+  place-content: center; */
+  width: 80%;
+  margin:auto;
+  margin-top:20px;
+  padding:50px 10%;
+  background-color: #F4F4F4;
+}
+@media(width < 768px) {
+  .section-gray {
+    width: 100%;
+    margin:auto;
+    margin-top:20px;
+    padding:40px 10%;
+    background-color: #F4F4F4;
+  }
+}

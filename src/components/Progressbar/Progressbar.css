@@ -1,0 +1,35 @@
+@media(width < 768px){
+.progress-bar {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  min-height: 20px;
+  padding: 6px;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.progress {
+  height: 8px;
+  background-color: #000000;
+  border-radius: 100px;
+}
+}
+@media(width >= 768px){
+  .progress-bar {
+    width: 60%;
+    min-height: 25px;
+    padding: 6px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 13px;
+    background-color: #000000;
+    border-radius: 100px;
+  }
+  }
