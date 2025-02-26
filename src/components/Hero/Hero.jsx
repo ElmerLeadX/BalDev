@@ -13,10 +13,10 @@ const Hero = ({ title, subtitle, signed, body, button, phrase, gopage, children}
 				<article className="article-hero">
 					<Cup color="#000000" className="hide-mob" />
 					<p className="subtitle hide-mob">{subtitle}</p>
-					<h1>{title}</h1>
+					{title ? <h1>{title}</h1> : null}
 					<span>
-						<p>{signed}</p>
-						<span>{body}</span>
+						{signed ? <p>{signed}</p> : null}
+						{body ? <span>{body}</span> : null}
 					</span>
 					{phrase ? <h3>{phrase}</h3> : null}
 					{button ? (
