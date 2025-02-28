@@ -34,11 +34,11 @@ function App() {
 			{lang === "en" ? (
 				<Hero
 					title="Wich Eyewear Shape Suits You Best?"
-					subtitle="Take the Quiz"
+					subtitle="Quiz"
 					signed=""
-					body="Discover the frame styles that match your style and personality—because, yes, we all have an oval face."
-					phrase="All in under 2 minutes!"
-					button="Take the Quiz Now"
+					body="Discover the frame styles that match your style and personality—because, yes, we <i>all</i> have an oval face!"
+					phrase=""
+					button="Start Now"
 					gopage={() => navigate("/gender")}
 				>
 					<Video src="https://cdn.shopify.com/videos/c/o/v/90983ca74c784c75bd02d0b86c466b7d.mp4" />
@@ -46,11 +46,11 @@ function App() {
 			) : (
 				<Hero
 					title="Quelle Forme de Lunettes Vous Convient le Mieux?"
-					subtitle="Faites le Quiz"
+					subtitle="Quiz"
 					signed=""
-					body="Découvrez les styles de montures qui correspondent à votre style et à votre personnalité—car, oui, nous avons tous un visage ovale."
-					phrase="Le tout en moins de 2 minutes!"
-					button="Faites le Quiz Maintenant"
+					body="Découvrez les styles de montures qui correspondent à votre style et à votre personnalité—car, oui, nous avons <i>tous</i> un visage ovale!"
+					phrase=""
+					button="Commencez maintenant"
 					gopage={() => navigate("/gender")}
 				>
 					<Video src="https://cdn.shopify.com/videos/c/o/v/90983ca74c784c75bd02d0b86c466b7d.mp4" />
