@@ -137,7 +137,7 @@ const Result = () => {
 							<p>
 								Nos opticiens et stylistes expérimentés ont hâte de vous
 								conseiller dans le choix des montures idéales pour vous dans l’une
-								des 6 boutiques ou en appel vidéo.
+								des 6 boutiques.
 							</p>
 							<a
 								href="https://baralunettes.com/pages/boutiques-bar-a-lunettes"
@@ -165,7 +165,7 @@ const Result = () => {
 							<p>
 								Our experienced opticians and stylists are looking forward to
 								advising you on the choice of the ideal frames for you in one of
-								the 6 stores or by video call.
+								the 6 stores.
 							</p>
 							<a
 								href="https://baralunettes.com/en/pages/boutiques-bar-a-lunettes"

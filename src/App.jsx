@@ -45,7 +45,7 @@ function App() {
 				</Hero>
 			) : (
 				<Hero
-					title="Quelle Forme de Lunettes Vous Convient le Mieux?"
+					title="Quelles Formes de Lunettes Vous Convient le Mieux?"
 					subtitle="Quiz"
 					signed=""
 					body="Découvrez les styles de montures qui correspondent à votre style et à votre personnalité—car, oui, nous avons <i>tous</i> un visage ovale!"

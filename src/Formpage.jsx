@@ -217,9 +217,15 @@ const Formpage = () => {
 				</div>
 				<div className="form-content">
 					{lang === "en" ? (
-						<HeadingQuiz title="Sign up to receive your results by email" />
+						<>
+							<p className="form-subtitle">Thank you!</p>
+							<HeadingQuiz title="Sign up to receive your results by email" />
+						</>
 					) : (
-						<HeadingQuiz title="Inscrivez-vous pour recevoir vos résultats par courriel" />
+						<>
+							<p className="form-subtitle">Merci!</p>
+							<HeadingQuiz title="Inscrivez-vous pour recevoir vos résultats par courriel" />
+						</>
 					)}
 					<Form sent={sent} setSent={setSent} lang={lang} />
 				</div>
