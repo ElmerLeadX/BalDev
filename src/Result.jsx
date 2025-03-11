@@ -32,8 +32,7 @@ const Result = () => {
 
 	useEffect(() => {
 		SetResults(data.results);
-	}
-	, [results,data.results]);
+	}, [results, data.results]);
 
 	return (
 		<QuizContext.Provider value={data}>
@@ -94,7 +93,7 @@ const Result = () => {
 											</div>
 											<h3>{result}</h3>
 										</div>
-									))
+								  ))
 								: results.map((result, index) => (
 										<div key={index} className="result-card">
 											<div className="result-image">
@@ -127,63 +126,79 @@ const Result = () => {
 													(result === "Triangle" && "Triangle")}
 											</h3>
 										</div>
-									))}
+								  ))}
 						</article>
 					</section>
 				</div>
 				{lang === "fr" ? (
-					<div className="booking-section">
-						<div className="booking-column">
-							<p>
-								Nos opticiens et stylistes expérimentés ont hâte de vous
-								conseiller dans le choix des montures idéales pour vous dans l’une
-								des 6 boutiques.
-							</p>
-							<a
-								href="https://baralunettes.com/pages/boutiques-bar-a-lunettes"
-								target="_blank"
-							>
-								Je prends rendez-vous en boutique
-							</a>
+					<section className="results-grid" style={{ paddingTop: "10px" }}>
+						<h2 style={{ marginBottom: "0px" }}>
+							Réservez une séance de stylisme avec nous
+						</h2>
+						<div className="booking-section" style={{ marginTop: "40px" }}>
+							<div className="booking-column">
+								<p>
+									Nos opticiens et stylistes expérimentés ont hâte de vous
+									conseiller dans le choix des montures idéales pour vous dans
+									l’une des 6 boutiques.
+								</p>
+								<a
+									href="https://baralunettes.com/pages/boutiques-bar-a-lunettes"
+									target="_blank"
+								>
+									Réserver ma séance en boutique
+								</a>
+							</div>
+							<div className="booking-column">
+								<p>
+									Vous ne pouvez pas vous rendre en personne à votre Bar à
+									Lunettes le plus proche? Aucun problème! Profitez d’une séance
+									de stylisme dans le confort de votre maison, via FaceTime ou
+									Zoom.
+								</p>
+								<a
+									href="https://baralunettes.as.me/schedule/68ef6492/appointment/40317996/calendar/10722194?appointmentTypeIds[]=40317996"
+									target="_blank"
+								>
+									Réserver ma séance par appel vidéo
+								</a>
+							</div>
 						</div>
-						<div className="booking-column">
-							<p>
-								Vous pouvez également rencontrer un opticien en ligne via Facetime
-								ou ZOOM :
-							</p>
-							<a
-								href="https://baralunettes.as.me/schedule/68ef6492/appointment/40317996/calendar/10722194?appointmentTypeIds[]=40317996"
-								target="_blank"
-							>
-								Je consulte un opticien en ligne
-							</a>
-						</div>
-					</div>
+					</section>
 				) : (
-					<div className="booking-section">
-						<div className="booking-column">
-							<p>
-								Our experienced opticians and stylists are looking forward to
-								advising you on the choice of the ideal frames for you in one of
-								the 6 stores.
-							</p>
-							<a
-								href="https://baralunettes.com/en/pages/boutiques-bar-a-lunettes"
-								target="_blank"
-							>
-								I book an appointment in store
-							</a>
+					<section className="results-grid" style={{ paddingTop: "10px" }}>
+						<h2 style={{ marginBottom: "0px" }}>
+							Book a Styling Session Appointment With Us
+						</h2>
+						<div className="booking-section" style={{ marginTop: "40px" }}>
+							<div className="booking-column">
+								<p>
+									Our experienced opticians and stylists are looking forward to
+									advising you on the choice of the ideal frames for you in one
+									of the 6 stores.
+								</p>
+								<a
+									href="https://baralunettes.com/en/pages/boutiques-bar-a-lunettes"
+									target="_blank"
+								>
+									Book My In-Store Appointment
+								</a>
+							</div>
+							<div className="booking-column">
+								<p>
+									Can&apos;t visit your nearby Bar à Lunettes in person? No
+									problem! Enjoy a personalized styling session with our expert
+									from the comfort of your home via FaceTime or Zoom.
+								</p>
+								<a
+									href="https://baralunettes.as.me/schedule/68ef6492/appointment/40317996/calendar/10722194?appointmentTypeIds[]=40317996"
+									target="_blank"
+								>
+									Book My Video Call
+								</a>
+							</div>
 						</div>
-						<div className="booking-column">
-							<p>You can also meet an optician online via Facetime or ZOOM:</p>
-							<a
-								href="https://baralunettes.as.me/schedule/68ef6492/appointment/40317996/calendar/10722194?appointmentTypeIds[]=40317996"
-								target="_blank"
-							>
-								I consult an optician online
-							</a>
-						</div>
-					</div>
+					</section>
 				)}
 				{lang === "fr" ? (
 					<p className="footer-message">
