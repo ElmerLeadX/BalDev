@@ -18,7 +18,7 @@ import "./Result.css";
 const Result = () => {
 	const data = useContext(QuizContext);
 	const [lang, setLang] = useState("fr");
-	const [results, SetResults] = useState([]);
+	const [results, SetResults] = useState([data.results]);
 
 	useEffect(() => {
 		if (data.lang === "en") {
@@ -32,7 +32,7 @@ const Result = () => {
 
 	useEffect(() => {
 		SetResults(data.results);
-	}, [results, data.results]);
+	}, [data.results]);
 
 	return (
 		<QuizContext.Provider value={data}>
