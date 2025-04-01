@@ -2,7 +2,6 @@
 import { useContext } from 'react';
 import { QuizContext } from '../../lib/quizContext';
 import { useNavigate } from 'react-router-dom';
-import {answers} from "../../lib/translate";
 import './Question.css';
 import Cup from '../Cup/Cup';
 import Arrow from '../Arrow/Arrow';import {
