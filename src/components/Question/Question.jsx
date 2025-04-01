@@ -57,7 +57,7 @@ const Question = ({question, option1, option2, optionText, optionText2, prevPage
             if (lang === "fr") {
               results = await CreateResults(data);
             } else {
-              results = await CreateResultsEn(data);
+              results = await CreateResults(data);
             }
             data.results = await results;
             const profile = await UpdateProfile(exists.data[0].id, data);
