@@ -1,7 +1,7 @@
-import { Results } from "./data"
+import { ResultsFR } from "./data"
 //oeil de chat and papillon removed from male options.
 export async function CreateResults(data) {
-  const Result = [...Results];
+  const Result = [...ResultsFR];
   //First Result - Petit rond
   Result[0].score += data.answers[0] === "Enjoué" ? 1 : 0;
   Result[0].score += data.answers[1] === "Décontracté" ? 1 : 0;
@@ -110,7 +110,7 @@ export async function CreateResults(data) {
 }
 
 export async function CreateResultsEn(data) {
-  const Result = [...Results];
+  const Result = [...ResultsFR];
   //First Result - Petit rond
   Result[0].score += data.answers[0] === "Playful" ? 1 : 0;
   Result[0].score += data.answers[1] === "Casual" ? 1 : 0;

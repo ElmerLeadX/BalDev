@@ -1,3 +1,3 @@
 import React from "react";
 
-export const QuizContext = React.createContext({lang: "",name: "", lastname: "", email: "",gender: "",terms:"no",answers: [],answersfr: [],results: []})
+export const QuizContext = React.createContext({lang: "",name: "", lastname: "", email: "",gender: "",terms:"no",answers: [],results: []})

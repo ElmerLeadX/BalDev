@@ -14,15 +14,12 @@ import Arrow from '../Arrow/Arrow';import {
 } from "../../lib/klaviyo";
 import { CreateResults, CreateResultsEn } from "../../lib/actions";
 
-const Question = ({question, option1, option2, prevPage, nextPage, /* hide2 = false, */ page, totalPages, showNextPage, setShowNextPage, active, setActive, className, lang}) => {
+const Question = ({question, option1, option2, optionText, optionText2, prevPage, nextPage, page, totalPages, showNextPage, setShowNextPage, active, setActive, className, lang}) => {
 	const navigate = useNavigate();
   const data = useContext(QuizContext);
-  /* const visible2 = hide2 === "true" ? "hide" : ""; */
 
   const handleClick = (ev,option) => {
     data.answers[page - 1] = option;
-    if(lang === "en")
-    data.answersfr[page - 1] = answers.find((answer) => answer[option] )[option];
     setShowNextPage(true);
     setActive(option);
   }
@@ -128,9 +125,9 @@ const Question = ({question, option1, option2, prevPage, nextPage, /* hide2 = fa
         <Cup color="#000000"/>
         <h2>{question}</h2>
         <div className="options roll-out">
-          <button className={active===option1 ? "active": ""} onClick={(ev) => handleClick(ev,option1)}>{option1}</button>
+          <button className={active===option1 ? "active": ""} onClick={(ev) => handleClick(ev,option1)}>{optionText}</button>
           OU
-          <button className={active===option2 ? "active": ""} onClick={(ev) => handleClick(ev,option2)}>{option2}</button>
+          <button className={active===option2 ? "active": ""} onClick={(ev) => handleClick(ev,option2)}>{optionText2}</button>
         </div>
         <div className="nav-quiz">
           <button onClick={()=>prevPage()} className={page > 1 ? "prev" : "prev hide"}><Arrow flip="true" color="#000000"/> {lang === "fr" ? "Retour" : "Back"}</button>

@@ -5,8 +5,12 @@ import Footer from "./components/Footer/Footer";
 import Pagination from "./components/Pagination/Pagination";
 import Progressbar from "./components/Progressbar/Progressbar";
 import Question from "./components/Question/Question";
-import { Questions as questionsfr } from "./lib/data";
-import { Questions as questions } from "./lib/data_en";
+import {
+	Questions as questionsfr,
+	QuestionsEN as questionsen,
+	OptionsEN,
+	OptionsFR
+} from "./lib/data";
 import { useEffect } from "react";
 const TOTAL_PAGES = 6;
 const Quiz = () => {
@@ -61,9 +65,11 @@ const Quiz = () => {
 						nextPage={nextPage}
 						prevPage={prevPage}
 						page={page}
-						question={questionsfr[page - 1].question}
+						question={questionsfr[0].question}
 						option1={questionsfr[page - 1].option1}
 						option2={questionsfr[page - 1].option2}
+						optionText={OptionsFR[page - 1][0]}
+						optionText2={OptionsFR[page - 1][1]}
 						hide2="true"
 						lang={lang}
 					/>
@@ -78,9 +84,11 @@ const Quiz = () => {
 						nextPage={nextPage}
 						prevPage={prevPage}
 						page={page}
-						question={questions[page - 1].question}
-						option1={questions[page - 1].option1}
-						option2={questions[page - 1].option2}
+						question={questionsen}
+						option1={questionsfr[page - 1].option1}
+						option2={questionsfr[page - 1].option2}
+						optionText={OptionsEN[page - 1][0]}
+						optionText2={OptionsEN[page - 1][1]}
 						hide2="true"
 						lang={lang}
 					/>
