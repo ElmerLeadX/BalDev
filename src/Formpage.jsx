@@ -15,7 +15,7 @@ import {
 	UpdateProfile,
 	subscribe,
 } from "./lib/klaviyo";
-import { CreateResults, CreateResultsEn } from "./lib/actions";
+import { CreateResults } from "./lib/actions";
 import "./Formpage.css";
 
 const Formpage = () => {
@@ -51,7 +51,7 @@ const Formpage = () => {
 						if (lang === "fr") {
 							results = await CreateResults(data);
 						} else {
-							results = await CreateResultsEn(data);
+							results = await CreateResults(data);
 						}
 						data.results = await results;
 						const profile = await UpdateProfile(exists.data[0].id, data);
@@ -119,7 +119,7 @@ const Formpage = () => {
 					if (lang === "fr") {
 						results = await CreateResults(data);
 					} else {
-						results = await CreateResultsEn(data);
+						results = await CreateResults(data);
 					}
 					data.results = await results;
 					const Profiles = await CreateProfiles(data);
