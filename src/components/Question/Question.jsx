@@ -12,7 +12,7 @@ import Arrow from '../Arrow/Arrow';import {
 	UpdateProfile,
 	subscribe,
 } from "../../lib/klaviyo";
-import { CreateResults, CreateResultsEn } from "../../lib/actions";
+import { CreateResults } from "../../lib/actions";
 
 const Question = ({question, option1, option2, optionText, optionText2, prevPage, nextPage, page, totalPages, showNextPage, setShowNextPage, active, setActive, className, lang}) => {
 	const navigate = useNavigate();

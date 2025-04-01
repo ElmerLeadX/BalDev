@@ -46,7 +46,7 @@ router.post("/createprofiles", (req, res) => {
 				last_name: profiledata.lastname,
 				properties: {
 					Réponse: profiledata.results,
-					Quizoptions: profiledata.answersfr,
+					Quizoptions: profiledata.answers,
 				},
 			},
 		},
@@ -125,8 +125,8 @@ router.post("/removelist", (req, res) => {
 
 router.post("/updateprofile", (req, res) => {
 	const profiledata = req.body.data;
-	var answers = profiledata.answersfr;
-	if (profiledata.answersfr.length === 0) {
+	var answers = profiledata.answers;
+	if (profiledata.answers.length === 0) {
 		answers = profiledata.answers;
 	}
 	const idrequest = req.body.id;
