@@ -22,6 +22,7 @@ export async function CreateProfiles(profiledata) {
 			revision: "2024-07-15",
 			"content-type": "application/json",
 			Authorization: `Klaviyo-API-Key ${apikey}`,
+			"Access-Control-Allow-Origin": "https://balquizdev.netlify.app",
 		},
 		body: JSON.stringify(datatosend),
 	});
@@ -35,7 +36,8 @@ export async function getProfiles(data) {
     headers: {
       revision: '2024-07-15',
       accept: 'application/json',
-      Authorization: `Klaviyo-API-Key ${apikey}`
+      Authorization: `Klaviyo-API-Key ${apikey}`,
+			"Access-Control-Allow-Origin": "https://balquizdev.netlify.app",
     },
   });
   return (await response).json();
@@ -49,6 +51,7 @@ export async function AddtoList(id, list) {
 			revision: "2024-07-15",
 			"content-type": "application/json",
 			Authorization: `Klaviyo-API-Key ${apikey}`,
+			"Access-Control-Allow-Origin": "https://balquizdev.netlify.app",
 		},
 
 		body: JSON.stringify({
@@ -72,6 +75,7 @@ export async function removeFromList(id, list) {
 			revision: "2024-07-15",
 			"content-type": "application/json",
 			Authorization: `Klaviyo-API-Key ${apikey}`,
+			"Access-Control-Allow-Origin": "https://balquizdev.netlify.app",
 		},
 		body: JSON.stringify({
 			data: [
@@ -106,6 +110,7 @@ export async function UpdateProfile(id,data) {
 			revision: "2024-07-15",
 			"content-type": "application/json",
 			Authorization: `Klaviyo-API-Key ${apikey}`,
+			"Access-Control-Allow-Origin": "https://balquizdev.netlify.app",
 		},
 		body: JSON.stringify(datatosend),
 	});
@@ -156,6 +161,7 @@ export async function subscribe(data,id,list) {
 			revision: "2024-07-15",
 			"content-type": "application/vnd.api+json",
 			Authorization: `Klaviyo-API-Key ${apikey}`,
+			"Access-Control-Allow-Origin": "https://balquizdev.netlify.app",
 		},
 		body: JSON.stringify(datatosend),
 	});
