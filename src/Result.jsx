@@ -62,7 +62,7 @@ const Result = () => {
 						/>
 					)}
 				</section>
-				<div className="container-results">
+				<div className="container-results" id="results">
 					<section className="results-grid">
 						<h2>{lang === "fr" ? "Vos résultats" : "Your results"}</h2>
 						<p>
@@ -133,7 +133,7 @@ const Result = () => {
 				{lang === "fr" ? (
 					<section className="results-grid" style={{ paddingTop: "10px" }}>
 						<h2 style={{ marginBottom: "0px" }}>
-							Réservez une séance de stylisme avec nous
+							Réservez une séance de stylisme de nos jours
 						</h2>
 						<div className="booking-section" style={{ marginTop: "40px" }}>
 							<div className="booking-column">
@@ -168,7 +168,7 @@ const Result = () => {
 				) : (
 					<section className="results-grid" style={{ paddingTop: "10px" }}>
 						<h2 style={{ marginBottom: "0px" }}>
-							Book a Styling Session Appointment With Us
+							Book a Styling Session Today
 						</h2>
 						<div className="booking-section" style={{ marginTop: "40px" }}>
 							<div className="booking-column">
@@ -181,14 +181,14 @@ const Result = () => {
 									href="https://baralunettes.com/en/pages/boutiques-bar-a-lunettes"
 									target="_blank"
 								>
-									Book My In-Store Appointment
+									Book My Appointment
 								</a>
 							</div>
 							<div className="booking-column">
 								<p>
 									Can&apos;t visit your nearby Bar à Lunettes in person? No
-									problem! Enjoy a personalized styling session with our expert
-									from the comfort of your home via FaceTime or Zoom.
+									problem! Enjoy a styling session with our expert from the
+									comfort of your home via FaceTime or Zoom.
 								</p>
 								<a
 									href="https://baralunettes.as.me/schedule/68ef6492/appointment/40317996/calendar/10722194?appointmentTypeIds[]=40317996"

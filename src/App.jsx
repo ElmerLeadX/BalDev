@@ -11,23 +11,22 @@ function App() {
 	const navigate = useNavigate();
 	const data = useContext(QuizContext);
 	const [lang, setLang] = useState("fr");
-	
+
 	useEffect(() => {
 		const urlemail = getURLEmail();
-		if(urlemail){
+		if (urlemail) {
 			data.email = urlemail;
 		}
-		const url  = getURLLang();
+		const url = getURLLang();
 		const currentLang = detectLanguage();
-		if(url !== null){
+		if (url !== null) {
 			data.lang = url;
 			setLang(url);
-		}
-		else{
+		} else {
 			data.lang = currentLang;
 			setLang(currentLang);
 		}
-	},[lang, data, setLang]);
+	}, [lang, data, setLang]);
 	return (
 		<QuizContext.Provider value={data}>
 			<Navbar lang={lang} setLang={setLang} />

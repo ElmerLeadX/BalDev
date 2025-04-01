@@ -1,12 +1,12 @@
-import { useContext, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { QuizContext } from './lib/quizContext'
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { QuizContext } from "./lib/quizContext";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import HeadingQuiz from "./components/HeadingQuiz/HeadingQuiz";
 import Form from "./components/Form/Form";
 import formbanner from "./assets/form-banner.jpg";
-import { useEffect } from 'react';
+import { useEffect } from "react";
 import {
 	CreateProfiles,
 	AddtoList,
@@ -16,29 +16,29 @@ import {
 	subscribe,
 } from "./lib/klaviyo";
 import { CreateResults, CreateResultsEn } from "./lib/actions";
-import './Formpage.css'
+import "./Formpage.css";
 
 const Formpage = () => {
-  const navigate = useNavigate()
-  const data = useContext(QuizContext);
+	const navigate = useNavigate();
+	const data = useContext(QuizContext);
 	const [lang, setLang] = useState("fr");
 	const [sent, setSent] = useState(false);
 
-  useEffect(() => {
-    if (data.lang === "en") {
+	useEffect(() => {
+		if (data.lang === "en") {
 			history.pushState(null, null, "?lang=en");
 			setLang("en");
 		} else {
 			history.pushState(null, null, "?lang=fr");
 			setLang("fr");
 		}
-		if(!sent){
+		if (!sent) {
 			if (data.email !== "") {
 				//store on klaviyo and redirect to results
 				navigate("/results");
 			}
 		}
-  },[sent, data.lang,data.email, navigate])
+	}, [sent, data.lang, data.email, navigate]);
 
 	useEffect(() => {
 		const sentResult = async () => {
@@ -188,10 +188,10 @@ const Formpage = () => {
 				console.log("Results are missing");
 			}
 		};
-		if(sent){
+		if (sent) {
 			sentResult();
 		}
-	},[sent, data, lang, navigate]);
+	}, [sent, data, lang, navigate]);
 
 	const deleteFromList = async (id) => {
 		const Deleted = await removeFromList(id, "X4e7xU");
@@ -208,7 +208,7 @@ const Formpage = () => {
 		return false;
 	};
 
-  return (
+	return (
 		<QuizContext.Provider value={data}>
 			<Navbar lang={lang} flag={false} />
 			<section className="form-container">
@@ -233,5 +233,5 @@ const Formpage = () => {
 			<Footer copy="© 2025, BAR À LUNETTES MARIE-SOPHIE DION" />
 		</QuizContext.Provider>
 	);
-}
-export default Formpage
+};
+export default Formpage;

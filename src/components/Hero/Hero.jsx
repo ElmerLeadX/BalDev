@@ -3,7 +3,16 @@ import Cup from "../Cup/Cup";
 import Arrow from "../Arrow/Arrow";
 import "./Hero.css";
 
-const Hero = ({ title, subtitle, signed, body, button, phrase, gopage, children}) => {
+const Hero = ({
+	title,
+	subtitle,
+	signed,
+	body,
+	button,
+	phrase,
+	gopage,
+	children,
+}) => {
 	return (
 		<section className="section-hero">
 			<Cup color="#000000" className="hide-desk" />
@@ -18,8 +27,7 @@ const Hero = ({ title, subtitle, signed, body, button, phrase, gopage, children}
 					<span>
 						{signed ? <p>{signed}</p> : null}
 						{body ? (
-							<span dangerouslySetInnerHTML={{ __html: body }}>
-							</span>
+							<span dangerouslySetInnerHTML={{ __html: body }}></span>
 						) : null}
 					</span>
 					{phrase ? <h3>{phrase}</h3> : null}

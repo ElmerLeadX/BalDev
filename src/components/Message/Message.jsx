@@ -3,7 +3,15 @@ import Arrow from "../../assets/Arrow 3.svg";
 import Cup from "../Cup/Cup";
 import "./Message.css";
 
-const Message = ({ title, subtitle, body, url, btn, secondsubttitle, body2 }) => {
+const Message = ({
+	title,
+	subtitle,
+	body,
+	url,
+	btn,
+	secondsubttitle,
+	body2,
+}) => {
 	return (
 		<article className="message">
 			<div className="message-card">
@@ -13,7 +21,7 @@ const Message = ({ title, subtitle, body, url, btn, secondsubttitle, body2 }) =>
 					<p>{subtitle}</p>
 					{body}
 				</span>
-				<a href={url} rel="noopener noreferrer" target="_blank">
+				<a href={url} rel="noopener noreferrer" target="_blank" className="btn">
 					{btn}
 				</a>
 				<span className="secondtitle">
@@ -21,7 +29,9 @@ const Message = ({ title, subtitle, body, url, btn, secondsubttitle, body2 }) =>
 					{body2}
 				</span>
 			</div>
-			<img className="arrow" src={Arrow} alt="arrow" />
+			<a href="#results" rel="noopener noreferrer">
+				<img className="arrow" src={Arrow} alt="arrow" />
+			</a>
 		</article>
 	);
 };
