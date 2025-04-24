@@ -20,17 +20,6 @@ const Navbar = ({lang, setLang, flag=true}) => {
 	}
 	return (
 		<nav>
-			<a
-				href="https://baralunettes.com"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<span>{lang === "fr" ? "Visiter le site" : "Visit the site"}</span>
-				<span>
-					bar à lunettes
-					<Arrow color="#000000" />
-				</span>
-			</a>
 			{flag &&
 				<button onClick={() => handleLang()} className={lang}>{lang === "fr" ? "EN" : "FR"}</button>
 			}

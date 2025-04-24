@@ -1,3 +1,22 @@
+:root{
+  --font-family-primary: 'Tenor Sans', sans-serif;
+  --font-family-secondary: 'Harmonia Sans', sans-serif;
+  --font-size: 16px;
+  --font-size-sm: 14px;
+  --font-size-md: 18px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+  --font-size-xxxl: 40px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-bolder: 900;
+  --color-primary: #000000;
+  --color-secondary: #FFFFFF;
+  --color-lightgray: #F4F4F4;
+  --color-coffee: #C8A36F;
+  --color-gray: #EEEEEE;
+}
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -23,7 +42,7 @@ img {
 main{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   height: 100vh;
 }
 @font-face {

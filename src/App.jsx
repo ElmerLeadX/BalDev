@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Video from "./components/Video/Video";
-import Footer from "./components/Footer/Footer";
 import { QuizContext } from "./lib/quizContext";
 import { detectLanguage, getURLLang, getURLEmail } from "./lib/actions";
 
@@ -32,30 +31,41 @@ function App() {
 			<Navbar lang={lang} setLang={setLang} />
 			{lang === "en" ? (
 				<Hero
-					title="Wich Eyewear Shape Suits You Best?"
+					title="Which frames suit you best?"
 					subtitle="Quiz"
-					signed=""
-					body="Discover the frame styles that match your style and personality—because, yes, we <i>all</i> have an oval face!"
+					signed="Bar à Lunettes"
+					body="Take 30 seconds to discover through our quiz all the glasses that harmonize with your unique style."
 					phrase=""
-					button="Start Now"
+					button="Start the quiz"
+					review="Thanks to the quiz and your advice, no more trying on 100 frames or more. What a relief!"
+					author="- Nathalie L -"
 					gopage={() => navigate("/gender")}
 				>
-					<Video src="https://cdn.shopify.com/videos/c/o/v/90983ca74c784c75bd02d0b86c466b7d.mp4" />
+					<Video
+						key={lang}
+						footer="Marie-Sophie Dion, Optician and Founder of Bar à Lunettes"
+						src="https://cdn.shopify.com/videos/c/o/v/581cd04a3f7d4d6e9a7393c81be0a3dd.mp4"
+					/>
 				</Hero>
 			) : (
 				<Hero
-					title="Quelles Formes de Lunettes Vous Convient le Mieux?"
+					title="Quelles formes vous vont le mieux?"
 					subtitle="Quiz"
-					signed=""
-					body="Découvrez les styles de montures qui correspondent à votre style et à votre personnalité—car, oui, nous avons <i>tous</i> un visage ovale!"
+					signed="Bar à Lunettes"
+					body="Prenez 30 secondes pour découvrir à travers notre quiz toutes les formes de verres qui s’harmonisent à votre style unique."
 					phrase=""
-					button="Commencez maintenant"
+					button="Commencez le quiz"
+					review="« Grâce au quiz et vos conseils, fini les essayages de 100 montures et plus. Quel soulagement! »"
+					author="- Nathalie L -"
 					gopage={() => navigate("/gender")}
 				>
-					<Video src="https://cdn.shopify.com/videos/c/o/v/90983ca74c784c75bd02d0b86c466b7d.mp4" />
+					<Video
+						key={lang}
+						footer="Marie-Sophie Dion, Opticienne et Fondatrice des Bar à Lunettes"
+						src="https://cdn.shopify.com/videos/c/o/v/170e582397df48d285378887153e2755.mp4"
+					/>
 				</Hero>
 			)}
-			<Footer copy="© 2025, BAR À LUNETTES MARIE-SOPHIE DION" />
 		</QuizContext.Provider>
 	);
 }

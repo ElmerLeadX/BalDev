@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import videocover from "../../assets/video-cover.png";
 import "./Video.css";
-const Video = ({ src }) => {
+const Video = ({ src, footer }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
   useEffect(() => {
     const handleResize = () => {
@@ -35,6 +35,9 @@ const Video = ({ src }) => {
 				<track kind="captions" />
 				Your browser does not support the video tag.
 			</video>
+			<div className="video-footer">
+				<p>{footer}</p>
+			</div>
 		</section>
 	);
 };
