@@ -2,10 +2,10 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { QuizContext } from "./lib/quizContext";
 import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import Review from "./components/Review/Review";
 import HeadingQuiz from "./components/HeadingQuiz/HeadingQuiz";
 import Form from "./components/Form/Form";
-import formbanner from "./assets/form-banner.jpg";
+import formbanner from "./assets/new-form-banner.jpg";
 import { useEffect } from "react";
 import {
 	CreateProfiles,
@@ -189,7 +189,8 @@ const Formpage = () => {
 			}
 		};
 		if (sent) {
-			sentResult();
+			navigate("/results");
+			//sentResult();
 		}
 	}, [sent, data, lang, navigate]);
 
@@ -211,26 +212,64 @@ const Formpage = () => {
 	return (
 		<QuizContext.Provider value={data}>
 			<Navbar lang={lang} flag={false} />
-			<section className="form-container">
-				<div>
-					<img src={formbanner} />
+			<section className="main-container">
+				<div className="form-container">
+					<div className="form-banner">
+						<img src={formbanner} />
+					</div>
+					<div className="form-content">
+						{lang === "en" ? (
+							<>
+								<HeadingQuiz
+									title="Your selection of glasses awaits!"
+									subtitle="Enter your email to receive your results"
+								/>
+							</>
+						) : (
+							<>
+								<HeadingQuiz
+									title="Votre sélection de lunettes vous attend!"
+									subtitle="Entrez votre courriel pour recevoir vos résultats"
+								/>
+							</>
+						)}
+						<Form sent={sent} setSent={setSent} lang={lang} />
+					</div>
 				</div>
-				<div className="form-content">
+				<div className="review-container">
 					{lang === "en" ? (
 						<>
-							<p className="form-subtitle">Thank you!</p>
-							<HeadingQuiz title="Sign up to receive your results by email" />
+							<Review
+								review="Marie-Sophie stands out by her audacity but also by the quality of her earrings. A revelation!"
+								author="- LARA FABIAN -"
+							/>
+							<Review
+								review="Since I started wearing the glasses that Marie-Sophie Dion created for me, I get so many compliments that I’m on the verge of getting a big head."
+								author="- SIMON BOULERICE -"
+							/>
+							<Review
+								review="My glasses, my only jewelry. Thank you so much Marie-Sophie. They are beautiful. My friends love them."
+								author="- LOUISE LATRAVERSE -"
+							/>
 						</>
 					) : (
 						<>
-							<p className="form-subtitle">Merci!</p>
-							<HeadingQuiz title="Inscrivez-vous pour recevoir vos résultats par courriel" />
+							<Review
+								review=" « Marie-Sophie se démarque par son audace mais aussi par la grande qualité de ses montures. Une révélation! »"
+								author="- LARA FABIAN -"
+							/>
+							<Review
+								review="« Depuis que je porte les lunettes que Marie-Sophie Dion m’a créées, je me fais tellement dire qu’elles sont magnifiques et qu’elles me vont bien que je suis sur le bord d’avoir la grosse tête. »"
+								author="- SIMON BOULERICE -"
+							/>
+							<Review
+								review="« Mes lunettes, mon seul bijou. Merci tellement Marie-Sophie. Elles sont superbes. Mes amis les adorent. »"
+								author="- LOUISE LATRAVERSE -"
+							/>
 						</>
 					)}
-					<Form sent={sent} setSent={setSent} lang={lang} />
 				</div>
 			</section>
-			<Footer copy="© 2025, BAR À LUNETTES MARIE-SOPHIE DION" />
 		</QuizContext.Provider>
 	);
 };

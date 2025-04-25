@@ -18,7 +18,7 @@ const Hero = ({
 }) => {
 	return (
 		<section className="section-hero">
-			<Cup color="#000000" className="hide-desk" Width="158" Height="168" />
+			<Cup color="#000000" className="hide-desk" Width="90" Height="120" />
 			<p className="subtitle hide-desk">{subtitle}</p>
 			<p className="subtitle hide-desk">{signed}</p>
 			{title ? <h1 className="hide-desk">{title}</h1> : null}

@@ -121,7 +121,7 @@ const Question = ({question, option1, option2, optionText, optionText2, prevPage
   return (
     <section key={page} className={`question ${className}`}>
       <article className="question-card">
-        <Cup color="#000000"/>
+        <Cup color="#000000" Width="20%" Height="103px"/>
         <h2>{question}</h2>
         <div className="options roll-out">
           <button className={active===option1 ? "active": ""} onClick={(ev) => handleClick(ev,option1)}>{optionText}</button>

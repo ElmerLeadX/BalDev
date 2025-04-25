@@ -78,7 +78,7 @@ const Form = ({ sent, setSent, lang }) => {
   };
   return (
 		<form onSubmit={handleSubmit}>
-			<div>
+			<div className="form-group">
 				<input
 					type="text"
 					id="name"
@@ -92,7 +92,7 @@ const Form = ({ sent, setSent, lang }) => {
 				/>
 				{errors.name && <span className="error-message">{errors.name}</span>}
 			</div>
-			<div>
+			<div className="form-group">
 				<input
 					type="text"
 					id="lastname"
@@ -108,7 +108,7 @@ const Form = ({ sent, setSent, lang }) => {
 					<span className="error-message">{errors.lastname}</span>
 				)}
 			</div>
-			<div>
+			<div className="form-group">
 				<input
 					type="text"
 					id="email"
@@ -122,38 +122,40 @@ const Form = ({ sent, setSent, lang }) => {
 				/>
 				{errors.email && <span className="error-message">{errors.email}</span>}
 			</div>
-			<label htmlFor="terms" className="subscribe">
-				<input type="checkbox" id="terms" name="terms" value="yes" />
-				{lang === "fr" ? (
-					<span>
-						Je prends conscience de la&nbsp;
-						<a
-							href="https://baralunettes.com/pages/terms-and-conditions"
-							target="_blank"
-							style={{ textDecoration: "underline" }}
-						>
-							politique de confidentialité
-						</a>
-						, et j&apos;accepte de recevoir des communications courriels de la
-						part de Bar à lunettes.
-					</span>
-				) : (
-					<span>
-						I have read and understood the&nbsp;
-						<a
-							href="https://baralunettes.com/en/pages/terms-and-conditions"
-							target="_blank"
-							style={{ textDecoration: "underline" }}
-						>
-							privacy policy
-						</a>
-						&nbsp;and agree to receive email communications from Bar à Lunettes.
-					</span>
-				)}
-			</label>
-			{errors.terms && <span className="error-message">{errors.terms}</span>}
+			<div className="form-group">
+				<label htmlFor="terms" className="subscribe">
+					<input type="checkbox" id="terms" name="terms" value="yes" />
+					{lang === "fr" ? (
+						<span>
+							Je comprends la&nbsp;
+							<a
+								href="https://baralunettes.com/pages/terms-and-conditions"
+								target="_blank"
+								style={{ textDecoration: "underline" }}
+							>
+								politique de confidentialité
+							</a>
+							, et j&apos;accepte de recevoir des communications du Bar à Lunettes
+						</span>
+					) : (
+						<span>
+							I have read and understood the&nbsp;
+							<a
+								href="https://baralunettes.com/en/pages/terms-and-conditions"
+								target="_blank"
+								style={{ textDecoration: "underline" }}
+							>
+								privacy policy
+							</a>
+							&nbsp;and agree to receive email communications from Bar à Lunettes.
+						</span>
+					)}
+				</label>
+				{errors.terms && <span className="error-message">{errors.terms}</span>}
+			</div>
 			<button type="submit" value="submit">
-				{lang === "fr" ? "Continuer" : "Continue"} <Arrow color="#ffffff" />
+				{lang === "fr" ? "Obtenir mes résultats" : "Get my results"}{" "}
+				<Arrow color="#ffffff" />
 			</button>
 		</form>
 	);
