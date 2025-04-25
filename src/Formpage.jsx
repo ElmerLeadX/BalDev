@@ -215,7 +215,7 @@ const Formpage = () => {
 			<section className="main-container">
 				<div className="form-container">
 					<div className="form-banner">
-						<img src={formbanner} />
+						<img src={formbanner} alt="A woman buying glasses" />
 					</div>
 					<div className="form-content">
 						{lang === "en" ? (
