@@ -14,14 +14,14 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 712px;
+    max-width: 742px;
   }
   & .column-2{
     display: flex;
     flex-direction: column;
     gap: 25px;
     width: 100%;
-    max-width: 414px;
+    max-width: 448px;
 
     & .article-hero{
       display: flex;
@@ -40,7 +40,7 @@
         text-transform: uppercase;
       }
       & h1{
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-xl);
         font-weight: var(--font-weight-bold); ;
         line-height: normal;
         color: var(--color-primary);
@@ -53,14 +53,17 @@
         line-height: normal;
         color: var(--color-primary);
         text-align: center;
+        width:100%;
+        max-width: 414px;
       }
       & .btn-quiz{
-        width: 100%;
-        padding: 12px 24px;
+        width:100%;
+        max-width: 414px;
+        padding: 12px 24px 12px 88px;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 55px;
+        gap: 34px;
         border: none;
         background: var(--color-primary);
         font-family: var(--font-family-secondary);
@@ -75,9 +78,10 @@
       display:flex;
       flex-direction: column;
       gap: 18px;
-      width: 100%;
-      max-width: 100%;
+      width:100%;
+      max-width: 318px;
       justify-content: center;
+      margin:0 auto;
       & .stars{
         display: flex;
         width: 100%;
@@ -86,7 +90,7 @@
       & .review-quote{
         & p{
           font-family: var(--font-family-secondary);
-          font-size: var(--font-size-md);
+          font-size: var(--font-size-sm);
           font-weight: var(--font-weight-normal);
           line-height: normal;
           color: var(--color-primary);

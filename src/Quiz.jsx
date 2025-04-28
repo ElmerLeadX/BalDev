@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { QuizContext } from "./lib/quizContext";
 import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
 import Pagination from "./components/Pagination/Pagination";
 import Progressbar from "./components/Progressbar/Progressbar";
 import Question from "./components/Question/Question";
@@ -94,7 +93,6 @@ const Quiz = () => {
 					/>
 				)}
 			</article>
-			<Footer copy="© 2025, BAR À LUNETTES MARIE-SOPHIE DION" />
 		</QuizContext.Provider>
 	);
 };

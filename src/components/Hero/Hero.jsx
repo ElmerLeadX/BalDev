@@ -18,14 +18,14 @@ const Hero = ({
 }) => {
 	return (
 		<section className="section-hero">
-			<Cup color="#000000" className="hide-desk" Width="90" Height="120" />
+			<Cup color="#000000" className="hide-desk" Width="96" Height="102" />
 			<p className="subtitle hide-desk">{subtitle}</p>
 			<p className="subtitle hide-desk">{signed}</p>
 			{title ? <h1 className="hide-desk">{title}</h1> : null}
 			{children ? children : null}
 			<div className="column-2">
 				<article className="article-hero">
-					<Cup color="#000000" className="hide-mob" Width="158" Height="168" />
+					<Cup color="#000000" className="hide-mob" Width="96" Height="102" />
 					<span>
 						<p className="subtitle hide-mob">{subtitle}</p>
 						<p className="subtitle hide-mob">{signed}</p>
