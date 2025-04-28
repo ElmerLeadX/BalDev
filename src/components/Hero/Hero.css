@@ -36,6 +36,9 @@
         color: var(--color-primary);
         text-align: center;
       }
+      & .subtitle:first-child{
+        text-transform: uppercase;
+      }
       & h1{
         font-size: var(--font-size-lg);
         font-weight: var(--font-weight-bold); ;
@@ -72,6 +75,9 @@
       display:flex;
       flex-direction: column;
       gap: 18px;
+      width: 100%;
+      max-width: 100%;
+      justify-content: center;
       & .stars{
         display: flex;
         width: 100%;
@@ -79,7 +85,7 @@
       }
       & .review-quote{
         font-family: var(--font-family-secondary);
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-md);
         font-weight: var(--font-weight-normal);
         line-height: normal;
         color: var(--color-primary);

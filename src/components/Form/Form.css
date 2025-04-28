@@ -80,14 +80,14 @@ form {
   }
   & span{
     font-family: var(--font-family-secondary);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xsm);
     font-weight: var(--font-weight-normal);
     color: var(--color-primary);
     line-height: normal;
   }
   & a{
     font-family: var(--font-family-secondary);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xsm);
     font-weight: var(--font-weight-normal);
     color: var(--color-primary);
     line-height: normal;
