@@ -241,30 +241,30 @@ const Formpage = () => {
 						<>
 							<Review
 								review="Marie-Sophie stands out by her audacity but also by the quality of her earrings. A revelation!"
-								author="- LARA FABIAN -"
+								author="LARA FABIAN"
 							/>
 							<Review
 								review="Since I started wearing the glasses that Marie-Sophie Dion created for me, I get so many compliments that I’m on the verge of getting a big head."
-								author="- SIMON BOULERICE -"
+								author="SIMON BOULERICE"
 							/>
 							<Review
 								review="My glasses, my only jewelry. Thank you so much Marie-Sophie. They are beautiful. My friends love them."
-								author="- LOUISE LATRAVERSE -"
+								author="LOUISE LATRAVERSE"
 							/>
 						</>
 					) : (
 						<>
 							<Review
 								review=" « Marie-Sophie se démarque par son audace mais aussi par la grande qualité de ses montures. Une révélation! »"
-								author="- LARA FABIAN -"
+								author="LARA FABIAN"
 							/>
 							<Review
 								review="« Depuis que je porte les lunettes que Marie-Sophie Dion m’a créées, je me fais tellement dire qu’elles sont magnifiques et qu’elles me vont bien que je suis sur le bord d’avoir la grosse tête. »"
-								author="- SIMON BOULERICE -"
+								author="SIMON BOULERICE"
 							/>
 							<Review
 								review="« Mes lunettes, mon seul bijou. Merci tellement Marie-Sophie. Elles sont superbes. Mes amis les adorent. »"
-								author="- LOUISE LATRAVERSE -"
+								author="LOUISE LATRAVERSE"
 							/>
 						</>
 					)}

@@ -62,7 +62,7 @@ nav{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: start;
 
         & span:nth-child(1){
           font-family: var(--font-family-primary);

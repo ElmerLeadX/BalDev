@@ -11,7 +11,7 @@ main:has(> div.result-page) {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top:calc(80px + 135px);
+  padding-top:calc(65px + 135px);
   .hero-result{
     display:flex;
     flex-direction: column;
@@ -19,14 +19,14 @@ main:has(> div.result-page) {
     align-items: center;
     width: 100%;
     max-width:1044px;
-    padding-bottom:80px;
+    padding-bottom:65px;
     & h1 {
       font-family: var(--font-family-primary);
       font-size:var(--font-size-xxxl);
       font-weight: var(--font-weight-normal);
       color: var(--color-primary);
       text-align: center;
-      margin-bottom:40px;
+      margin-bottom:65px;
       width: 100%;
       max-width: 936px;
     }
@@ -40,7 +40,7 @@ main:has(> div.result-page) {
   }
   .section-gray{
     width: 100%;
-    padding:45px 0px 99px 0px;
+    padding:65px 0px 65px 0px;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -63,7 +63,7 @@ main:has(> div.result-page) {
       align-items:center;
       width:100%;
       max-width: 723px;
-      margin-bottom:59px;
+      margin-bottom:65px;
       & li{
         position:relative;
         font-family: var(--font-family-secondary);
@@ -124,7 +124,7 @@ main:has(> div.result-page) {
             flex-flow:row;
             gap:16px;
             align-items: start;
-            margin-bottom:21px;
+            margin-bottom:25px;
             & span{
               font-family:var(--font-family-secondary);
               font-size:var(--font-size-lg);
@@ -154,7 +154,7 @@ main:has(> div.result-page) {
           max-width: 456px;
           height: 48px;
           padding: 12px 24px;
-          margin-bottom:31px;
+          margin-bottom:48px;
           background-color: var(--color-primary);
           color: var(--color-secondary);
           font-family: var(--font-family-secondary);
@@ -170,8 +170,8 @@ main:has(> div.result-page) {
           gap:16px;
           width:100%;
           max-width: 456px;
-          height: 48px;
-          padding: 12px 24px;
+          height: 22px;
+          padding: 0px 24px;
           color: var(--color-primary);
           font-family: var(--font-family-secondary);
           font-size: var(--font-size-lg);
@@ -199,8 +199,8 @@ main:has(> div.result-page) {
   .comments{
     width:100%;
     max-width: 1044px;
-    padding-top:67px;
-    padding-bottom: 40px;
+    padding-top:65px;
+    padding-bottom: 65px;
     display:flex;
     flex-direction: column;
     justify-content: start;
@@ -211,7 +211,7 @@ main:has(> div.result-page) {
       font-weight: var(--font-weight-normal);
       color: var(--color-primary);
       text-align: center;
-      margin-bottom:78px;
+      margin-bottom:65px;
       width: 100%;
       max-width: 756px;
     }
@@ -258,16 +258,17 @@ main:has(> div.result-page) {
       flex-flow:row;
       justify-content:space-between;
       gap:58px;
-      margin-bottom:94px;
+      margin-bottom:65px;
     }
     & .btn-primary{
       display:flex;
       justify-content:space-between;
       align-items:center;
+      gap:25px;
       width:100%;
       max-width: 366px;
       height: 48px;
-      padding: 12px 29px;
+      padding: 12px 47px;
       margin-bottom:31px;
       background-color: var(--color-primary);
       color: var(--color-secondary);
@@ -283,7 +284,7 @@ main:has(> div.result-page) {
     display:flex;
     flex-direction: column;
     align-items:center;
-    padding:75px 0 113px 0;
+    padding:65px 0 65px 0;
 
     & h2{
       font-family: var(--font-family-primary);
@@ -291,7 +292,7 @@ main:has(> div.result-page) {
       font-weight: var(--font-weight-normal);
       color: var(--color-primary);
       text-align: center;
-      margin-bottom:67px;
+      margin-bottom:65px;
       width: 100%;
       max-width: 756px;
     }
@@ -301,7 +302,7 @@ main:has(> div.result-page) {
       grid-template-rows: repeat(2, 1fr);
       width: 100%;
       max-width: 100%;
-      margin-bottom:94px;
+      margin-bottom:65px;
       & img{
         width:100%;
         height:100%;
@@ -313,10 +314,11 @@ main:has(> div.result-page) {
       display:flex;
       justify-content:space-between;
       align-items:center;
+      gap:18px;
       width:100%;
-      max-width: 516px;
+      max-width: 470px;
       height: 48px;
-      padding: 12px 29px;
+      padding: 12px 35.5px;
       margin-bottom:31px;
       background-color: var(--color-primary);
       color: var(--color-secondary);
