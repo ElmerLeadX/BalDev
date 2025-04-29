@@ -212,7 +212,7 @@ const Formpage = () => {
 	return (
 		<QuizContext.Provider value={data}>
 			<Navbar lang={lang} flag={false} />
-			<section className="main-container">
+			<section className="main-container form-page">
 				<div className="form-container">
 					<div className="form-banner">
 						<img src={formbanner} alt="A woman buying glasses" />

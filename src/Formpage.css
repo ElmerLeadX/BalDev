@@ -1,42 +1,92 @@
-.main-container{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column;
-
-  & .form-container{
+@media(width < 966px){
+  main:has(> section.form-page) {
+    height: auto;
+  }
+  .main-container{
     display:flex;
-    flex-flow: row;
-    align-items:center;
-    gap:58px;
-    width:100%;
-    max-width: 966px;
-    height: 462px;
-    & .form-banner{
-      width:100%;
-      max-width: 519px;
-      height: 100%;
-      & img{
-        width:100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-    & .form-content{
-      width:100%;
-      max-width: 389px;
-      height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 30px;
+
+    & .form-container{
       display:flex;
       flex-flow: column;
-      justify-content: end;
+      align-items:center;
       gap:30px;
+      width:100%;
+      max-width: 966px;
+      & .form-banner{
+        width:100%;
+        max-width:  428px;
+        height: auto;
+        & img{
+          width:100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      & .form-content{
+        width:100%;
+        max-width:  428px;
+        display:flex;
+        flex-flow: column;
+        justify-content: end;
+        gap:30px;
+      }
+    }
+    & .review-container{
+      display:flex;
+      flex-flow: column;
+      align-items: center;
+      margin:0 auto;
+      width:100%;
+      max-width: 428px;
+      margin-top: 30px;
     }
   }
-  & .review-container{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
-    width:100%;
-    max-width: 966px;
-    margin-top: 57px;
+}
+@media(width >= 966px){
+  .main-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+
+    & .form-container{
+      display:flex;
+      flex-flow: row;
+      align-items:center;
+      gap:58px;
+      width:100%;
+      max-width: 966px;
+      height: 462px;
+      & .form-banner{
+        width:100%;
+        max-width: 519px;
+        height: 100%;
+        & img{
+          width:100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      & .form-content{
+        width:100%;
+        max-width: 389px;
+        height: 100%;
+        display:flex;
+        flex-flow: column;
+        justify-content: end;
+        gap:30px;
+      }
+    }
+    & .review-container{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
+      width:100%;
+      max-width: 966px;
+      margin-top: 57px;
+    }
   }
 }

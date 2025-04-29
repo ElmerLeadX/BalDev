@@ -1,33 +1,74 @@
-.article-review{
-  display:flex;
-  flex-direction: column;
-  gap: 18px;
-  width: 100%;
-  max-width:298px;
-  justify-self:center;
-  & .stars{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-  & .review-quote{
-    font-family: var(--font-family-secondary);
-    font-size: var(--font-size-xsm);
-    font-weight: var(--font-weight-normal);
-    line-height: normal;
-    color: var(--color-primary);
-    text-align: center;
-    & p:first-child{
-      margin-bottom:5px;
-    }
-  }
-}
+@media (width < 966px) {
+	.article-review {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		width: 100%;
+		max-width: 298px;
+		justify-self: center;
+		& .stars {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+		}
+		& .review-quote {
+			font-family: var(--font-family-secondary);
+			font-size: var(--font-size-xsm);
+			font-weight: var(--font-weight-normal);
+			line-height: normal;
+			color: var(--color-primary);
+			text-align: center;
+			& p:first-child {
+				margin-bottom: 5px;
+			}
+			margin-bottom: 30px;
+		}
+	}
 
-.article-review:first-child{
-  justify-self:start;
-  max-width:266px;
+	.article-review:first-child {
+		justify-self: start;
+		max-width: 286px;
+	}
+	.article-review:last-child {
+		justify-self: end;
+		max-width: 289px;
+		& .review-quote {
+			margin-bottom: 0;
+		}
+	}
 }
-.article-review:last-child{
-  justify-self: end;
-  max-width:266px;
+@media (width >= 966px) {
+	.article-review {
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+		width: 100%;
+		max-width: 298px;
+		justify-self: center;
+		& .stars {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+		}
+		& .review-quote {
+			font-family: var(--font-family-secondary);
+			font-size: var(--font-size-xsm);
+			font-weight: var(--font-weight-normal);
+			line-height: normal;
+			color: var(--color-primary);
+			text-align: center;
+			& p:first-child {
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	.article-review:first-child {
+		justify-self: start;
+		max-width: 266px;
+	}
+	.article-review:last-child {
+		justify-self: end;
+		max-width: 266px;
+	}
 }

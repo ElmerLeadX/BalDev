@@ -1,3 +1,36 @@
+@media(width <= 966px){
+  .section-video{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 712px;
+  & video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  & .video-footer{
+    position: absolute;
+    bottom: 0;
+    height: 31.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: var(--color-lightgray);
+    font-family: var(--fotn-family-secondary);
+    font-size: var(--font-size-xsm);
+    font-weight: var(--font-weight-normal);
+    line-height: normal;
+  }
+}
+}
+@media(width >= 966px){
 .section-video{
   position:relative;
   display: flex;
@@ -27,4 +60,5 @@
     font-weight: var(--font-weight-normal);
     line-height: normal;
   }
+}
 }

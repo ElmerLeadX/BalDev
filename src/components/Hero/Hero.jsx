@@ -18,19 +18,19 @@ const Hero = ({
 }) => {
 	return (
 		<section className="section-hero">
-			<Cup color="#000000" className="hide-desk" Width="96" Height="102" />
-			<p className="subtitle hide-desk">{subtitle}</p>
-			<p className="subtitle hide-desk">{signed}</p>
-			{title ? <h1 className="hide-desk">{title}</h1> : null}
+			<Cup color="#000000" className="hide-desk" Width="67.17" Height="71.53" />
+			<p className="subtitle hide-desk">
+				<span>{subtitle}</span> {signed}
+			</p>
 			{children ? children : null}
 			<div className="column-2">
 				<article className="article-hero">
 					<Cup color="#000000" className="hide-mob" Width="96" Height="102" />
-					<span>
+					<span className="hide-mob">
 						<p className="subtitle hide-mob">{subtitle}</p>
 						<p className="subtitle hide-mob">{signed}</p>
 					</span>
-					{title ? <h1 className="hide-mob">{title}</h1> : null}
+					{title ? <h1>{title}</h1> : null}
 					{body ? (
 						<span dangerouslySetInnerHTML={{ __html: body }}></span>
 					) : null}

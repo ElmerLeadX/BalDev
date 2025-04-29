@@ -18,6 +18,9 @@ import collage5 from "./assets/collage5.webp";
 import collage6 from "./assets/collage6.webp";
 import collage7 from "./assets/collage7.webp";
 import collage8 from "./assets/collage8.webp";
+import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
+// Default theme
+import "@splidejs/react-splide/css";
 
 const Result = () => {
 	const data = useContext(QuizContext);
@@ -177,11 +180,11 @@ const Result = () => {
 				</section>
 				<section className="comments">
 					{lang === "fr" ? (
-						<h2>{`Comment nous apportons de la valeur à nos clients`}</h2>
+						<h2>{`Nous apportons de la valeur à nos clients`}</h2>
 					) : (
-						<h2>{`How we bring value to our clients`}</h2>
+						<h2>{`We bring value to our clients`}</h2>
 					)}
-					<div className="comments-container">
+					<div className="comments-container hide-mob">
 						<div className="comment">
 							<h3>ADNREW MCNALLY</h3>
 							<Quote color="#000000" Width="69px" Height="68px" />
@@ -222,7 +225,7 @@ const Result = () => {
 							)}
 						</div>
 					</div>
-					<div className="img-comments-container">
+					<div className="img-comments-container hide-mob">
 						<div>
 							<img src={andrew} alt="Andrew McNally" />
 						</div>
@@ -233,6 +236,69 @@ const Result = () => {
 							<img src={jeanclaude} alt="Jean-Claude Poitras" />
 						</div>
 					</div>
+					<Splide
+						options={{
+							type: "loop",
+							gap: "1rem",
+							autoplay: true,
+							height: "702px"
+						}}
+						hasTrack={false}
+						style={{ width: "100%" }}
+					>
+						<div style={{ position: "relative" }} className="comments-container hide-desk">
+							<SplideTrack>
+								<SplideSlide>
+									<div className="comment">
+										<h3>ADNREW MCNALLY</h3>
+										<Quote color="#000000" Width="69px" Height="68px" />
+										{lang === "fr" ? (
+											<span>
+												{`« Les lunettes sont l’un des seuls accessoires que vous porterez quotidiennement, le confort est donc primordial. Pourquoi ne pas avoir en plus le plaisir de porter sur le bout de son nez une création unique? »`}
+											</span>
+										) : (
+											<span>
+												{`"Glasses are one of the only accessories you wear daily, comfort is therefore paramount. Why not have the pleasure of wearing on the tip of your nose a unique creation?"`}
+											</span>
+										)}
+										<img src={andrew} alt="Andrew McNally" />
+									</div>
+								</SplideSlide>
+								<SplideSlide>
+									<div className="comment">
+										<h3>JOSÉE DARCHE</h3>
+										<Quote color="#000000" Width="69px" Height="68px" />
+										{lang === "fr" ? (
+											<span>
+												{`« Un grand merci pour cette monture conçue avec passion. Au Bar à Lunettes, chaque détail, chaque geste, est top niveau. »`}
+											</span>
+										) : (
+											<span>
+												{`"Thank you for this frame designed with passion. At the Eyewear Bar, every detail, every gesture, is top notch."`}
+											</span>
+										)}
+										<img src={josee} alt="Josee Darche" />
+									</div>
+								</SplideSlide>
+								<SplideSlide>
+									<div className="comment">	
+										<h3>JEAN-CLAUDE POITRAS</h3>
+										<Quote color="#000000" Width="69px" Height="68px" />
+										{lang === "fr" ? (
+											<span>
+												{`« Le succès toujours grandissant de cette griffe, tant auprès du grand public que de l’élite du monde des affaires et du milieu artistique, est remarquable. Cette créatrice inspirée, doublée d’une femme d’affaires avisée, n’a pas fini de surprendre. »`}
+											</span>
+										) : (
+											<span>
+												{`"The ever-growing success of this brand, both among the general public and the elite of the business and artistic world, is remarkable. This inspired creator, coupled with a savvy businesswoman, is sure to surprise."`}
+											</span>
+										)}
+										<img src={jeanclaude} alt="Jean-Claude Poitras" />
+									</div>
+								</SplideSlide>
+							</SplideTrack>
+						</div>
+					</Splide>
 					<a
 						href="https://baralunettes.com/pages/boutiques-bar-a-lunettes"
 						target="_blank"
@@ -256,19 +322,14 @@ const Result = () => {
 				<section className="collage">
 					{lang === "fr" ? (
 						<h2>
-							{`Les montures québécoises`}
+							{`Les montures Bar à Lunettes Marie-Sophie Dion,`}
 							<br />
-							{`Bar à Lunettes par Marie-Sophie Dion,`}
-							<br />
-							{`fièrement portées`}
+							{`fièrement portées par les québécois et à l'international`}
 						</h2>
 					) : (
 						<h2>
-							{`The Quebec Frames`}
-							<br />
-							{`Bar à Lunettes by Marie-Sophie Dion,`}
-							<br />
-							{`proudly worn`}
+							{`Eyewear Bar à Lunettes Marie-Sophie Dion,`} <br />{" "}
+							{`proudly worn by Quebecois and internationally`}
 						</h2>
 					)}
 					<div className="collage-container">
