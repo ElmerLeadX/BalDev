@@ -53,6 +53,13 @@ main{
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Harmonia Sans';
+  src: url('/fonts/harmoniasans_n7.db6a243cdeddb2eba0b2e8fccdce1e6910fd06d0.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 .error-input {
   border: 1px solid red;
 }
