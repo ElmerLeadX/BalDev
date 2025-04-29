@@ -8,7 +8,7 @@
   & video{
     position: absolute;
     width: 100%;
-    height: calc(100% - 44px);
+    height: calc(100% - 31.5px);
     top: 0;
     left: 0;
     object-fit: cover;
@@ -16,14 +16,14 @@
   & .video-footer{
     position: absolute;
     bottom: 0;
-    height: 44px;
+    height: 31.5px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     background: var(--color-lightgray);
     font-family: var(--fotn-family-secondary);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xsm);
     font-weight: var(--font-weight-normal);
     line-height: normal;
   }

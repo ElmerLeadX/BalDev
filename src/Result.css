@@ -18,11 +18,11 @@ main:has(> div.result-page) {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width:1044px;
+    max-width:936px;
     padding-bottom:65px;
     & h1 {
       font-family: var(--font-family-primary);
-      font-size:var(--font-size-xxxl);
+      font-size:var(--font-size-xxl);
       font-weight: var(--font-weight-normal);
       color: var(--color-primary);
       text-align: center;
@@ -48,7 +48,7 @@ main:has(> div.result-page) {
     background-color: var(--color-gray);
     & h2{
       font-family: var(--font-family-primary);
-      font-size: var(--font-size-xxxl);
+      font-size: var(--font-size-xxl);
       font-weight: var(--font-weight-normal);
       color: var(--color-primary);
       text-align: center;
@@ -67,7 +67,7 @@ main:has(> div.result-page) {
       & li{
         position:relative;
         font-family: var(--font-family-secondary);
-        font-size:var(--font-size-lg);
+        font-size:var(--font-size-md);
         font-weight: var(--font-weight-normal);
         letter-spacing: 0.2px;
         color: var(--color-primary);
@@ -85,7 +85,7 @@ main:has(> div.result-page) {
         left: calc(100% - 1px);
         transform: translateY(-50%);
         font-family: var(--font-family-secondary);
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-md);
         color: var(--color-primary);
       }
     }
@@ -95,8 +95,8 @@ main:has(> div.result-page) {
       justify-content: center;
       align-items:center;
       width:100%;
-      max-width: 1044px;
-      gap: 152px;
+      max-width: 869px;
+      gap: 93px;
 
       .column-1{
         display:flex;
@@ -108,7 +108,7 @@ main:has(> div.result-page) {
 
         & h3{
           font-family:var(--font-family-secondary);
-          font-size:var(--font-size-lg);
+          font-size:var(--font-size-sm);
           font-weight: var(--font-weight-bold);
           letter-spacing: 0.2px;
           color: var(--color-primary);
@@ -130,7 +130,7 @@ main:has(> div.result-page) {
             margin-bottom:25px;
             & span{
               font-family:var(--font-family-secondary);
-              font-size:var(--font-size-lg);
+              font-size:var(--font-size-sm);
               font-weight: var(--font-weight-normal);
               letter-spacing: 0.2px;
               color: var(--color-primary);
@@ -138,10 +138,13 @@ main:has(> div.result-page) {
               width: calc(100% - 47px);
             }
           }
+          & .blurb:last-child{
+            margin-bottom:0px;
+          }
         }
         & h4{
           font-family:var(--font-family-secondary);
-          font-size:var(--font-size-lg);
+          font-size:var(--font-size-sm);
           font-weight: var(--font-weight-bold);
           letter-spacing: 0.2px;
           color: var(--color-primary);
@@ -149,22 +152,28 @@ main:has(> div.result-page) {
           margin-bottom:48px;
         }
         .btn-primary{
+          position:relative;
           display:flex;
           justify-content:center;
           align-items:center;
           gap:16px;
           width:100%;
           max-width: 456px;
-          height: 48px;
-          padding: 12px 24px;
+          height: 40px;
+          padding: 9.38px 24px;
           margin-bottom:48px;
           background-color: var(--color-primary);
           color: var(--color-secondary);
           font-family: var(--font-family-secondary);
-          font-size: var(--font-size-lg);
+          font-size: var(--font-size-sm);
           font-weight: var(--font-weight-normal);
           letter-spacing: 0.2px;
           text-align: center;
+
+          & svg{
+            position:absolute;
+            right:24px;
+          }
         }
         .btn-secondary{
           display:flex;
@@ -177,7 +186,7 @@ main:has(> div.result-page) {
           padding: 0px 24px;
           color: var(--color-primary);
           font-family: var(--font-family-secondary);
-          font-size: var(--font-size-lg);
+          font-size: var(--font-size-sm);
           font-weight: var(--font-weight-normal);
           letter-spacing: 0.2px;
           text-align: center;
@@ -186,7 +195,10 @@ main:has(> div.result-page) {
       }
       .column-2{
         width:100%;
-        max-width:435px;
+        max-width:320.165px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
         & img{
           width:100%;
           height:100%;
@@ -194,14 +206,14 @@ main:has(> div.result-page) {
           object-position: center;
         }
         & img:first-child{
-          margin-bottom: 25.91px;
+          margin-bottom: 23.2px;
         }
       }
     }
   }
   .comments{
     width:100%;
-    max-width: 1044px;
+    max-width: 936px;
     padding-top:65px;
     padding-bottom: 65px;
     display:flex;
@@ -210,7 +222,7 @@ main:has(> div.result-page) {
     align-items: center;
     & h2{
       font-family: var(--font-family-primary);
-      font-size: var(--font-size-xxxl);
+      font-size: var(--font-size-xxl);
       font-weight: var(--font-weight-normal);
       color: var(--color-primary);
       text-align: center;
@@ -224,7 +236,7 @@ main:has(> div.result-page) {
       justify-content: space-between;
       align-items:start;
       width:100%;
-      max-width: 1044px;
+      max-width: 936px;
       gap: 58px;
       margin-bottom:43px;
       & .comment{
@@ -236,7 +248,7 @@ main:has(> div.result-page) {
         max-width: 456px;
         & h3{
           font-family:var(--font-family-secondary);
-          font-size:var(--font-size-lg);
+          font-size:var(--font-size-md);
           font-weight: var(--font-weight-normal);
           letter-spacing: 0.2px;
           color: var(--color-primary);
@@ -248,7 +260,7 @@ main:has(> div.result-page) {
         }
         & span{
           font-family:var(--font-family-secondary);
-          font-size:var(--font-size-lg);
+          font-size:var(--font-size-md);
           font-weight: var(--font-weight-normal);
           letter-spacing: 0.2px;
           color: var(--color-primary);
@@ -264,22 +276,28 @@ main:has(> div.result-page) {
       margin-bottom:65px;
     }
     & .btn-primary{
+      position:relative;
       display:flex;
-      justify-content:space-between;
+      justify-content:center;
       align-items:center;
       gap:25px;
       width:100%;
       max-width: 366px;
-      height: 48px;
-      padding: 12px 47px;
+      height: 40px;
+      padding: 9.38px 24px;
       margin-bottom:31px;
       background-color: var(--color-primary);
       color: var(--color-secondary);
       font-family: var(--font-family-secondary);
-      font-size: var(--font-size-lg);
+      font-size: var(--font-size-sm);
       font-weight: var(--font-weight-normal);
       letter-spacing: 0.2px;
       text-align: center;
+
+      & svg{
+        position:absolute;
+        right:24px;
+      }
     }
   }
   .collage{
@@ -291,7 +309,7 @@ main:has(> div.result-page) {
 
     & h2{
       font-family: var(--font-family-primary);
-      font-size: var(--font-size-xxxl);
+      font-size: var(--font-size-xxl);
       font-weight: var(--font-weight-normal);
       color: var(--color-primary);
       text-align: center;
@@ -314,22 +332,28 @@ main:has(> div.result-page) {
       }
     }
     & .btn-primary{
+      position:relative;
       display:flex;
-      justify-content:space-between;
+      justify-content:center;
       align-items:center;
       gap:18px;
       width:100%;
-      max-width: 470px;
-      height: 48px;
-      padding: 12px 35.5px;
+      max-width: 446px;
+      height: 40px;
+      padding: 9.38px 24px;
       margin-bottom:31px;
       background-color: var(--color-primary);
       color: var(--color-secondary);
       font-family: var(--font-family-secondary);
-      font-size: var(--font-size-lg);
+      font-size: var(--font-size-sm);
       font-weight: var(--font-weight-normal);
       letter-spacing: 0.2px;
       text-align: center;
+
+      & svg{
+        position:absolute;
+        right:24px;
+      }
     }
     
     .btn-secondary{
@@ -338,11 +362,11 @@ main:has(> div.result-page) {
       align-items:center;
       gap:16px;
       width:fit-content;
-      height: 48px;
+      height: 40px;
       padding: 0 24px;
       color: var(--color-primary);
       font-family: var(--font-family-secondary);
-      font-size: var(--font-size-lg);
+      font-size: var(--font-size-sm);
       font-weight: var(--font-weight-normal);
       line-height:20px;
       letter-spacing: 0.2px;

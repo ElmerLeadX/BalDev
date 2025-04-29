@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 18px;
   width: 100%;
-  max-width:280px;
+  max-width:298px;
   justify-self:center;
   & .stars{
     display: flex;

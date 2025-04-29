@@ -10,11 +10,11 @@
     align-items:center;
     gap:58px;
     width:100%;
-    max-width: 1038px;
-    height: 481px;
+    max-width: 966px;
+    height: 441px;
     & .form-banner{
       width:100%;
-      max-width: 566px;
+      max-width: 519px;
       height: 100%;
       & img{
         width:100%;
@@ -24,7 +24,7 @@
     }
     & .form-content{
       width:100%;
-      max-width: 414px;
+      max-width: 389px;
       height: 100%;
       display:flex;
       flex-flow: column;
@@ -36,7 +36,7 @@
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
     width:100%;
-    max-width: 1038px;
-    margin-top: 83px;
+    max-width: 966px;
+    margin-top: 57px;
   }
 }
