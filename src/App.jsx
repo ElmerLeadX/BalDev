@@ -33,7 +33,7 @@ function App() {
 				<Hero
 					title="Which frames suit you best?"
 					subtitle="Quiz"
-					signed="Bar à Lunettes"
+					signed="Eyewear Bar"
 					body="Take 30 seconds to discover through our quiz all the glasses that harmonize with your unique style."
 					phrase=""
 					button="Start the quiz"

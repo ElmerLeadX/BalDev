@@ -45,7 +45,9 @@ const Result = () => {
 						<h1>
 							{`Découvrez comment nous avons élevé le look de plus de 60,000
 							québécois grâce à des lunettes parfaitement adaptées à leurs
-							traits, leur style et leur personnalité… et comment nous pouvons
+							traits, leur style et leur personnalité…`}
+							<br />
+							{` et comment nous pouvons
 							faire de même pour vous!`}
 						</h1>
 					) : (
@@ -147,10 +149,10 @@ const Result = () => {
 							</div>
 							{lang === "fr" ? (
 								<h4>
-									{`Ne perdez pas cette CONSULTATION GRATUITE de 50 minutes en tête-à-tête avec un expert du Bar à Lunettes.`}
+									{`N'attendez pas! Réservez votre CONSULTATION GRATUITE de 50 minutes en tête-à-tête avec un expert du Bar à Lunettes.`}
 								</h4>
 							) : (
-								<h4>{`Don't miss this FREE 50-minute consultation with an expert at the Eyewear Bar.`}</h4>
+								<h4>{`Don't wait! Book your FREE 50-minute consultation in person with an expert at the Eyewear Bar.`}</h4>
 							)}
 							<a
 								href="https://baralunettes.com/pages/boutiques-bar-a-lunettes"
@@ -179,11 +181,6 @@ const Result = () => {
 					</div>
 				</section>
 				<section className="comments">
-					{lang === "fr" ? (
-						<h2>{`Nous apportons de la valeur à nos clients`}</h2>
-					) : (
-						<h2>{`We bring value to our clients`}</h2>
-					)}
 					<div className="comments-container hide-mob">
 						<div className="comment">
 							<h3>ADNREW MCNALLY</h3>
@@ -241,12 +238,15 @@ const Result = () => {
 							type: "loop",
 							gap: "1rem",
 							autoplay: true,
-							height: "702px"
+							height: "702px",
 						}}
 						hasTrack={false}
 						style={{ width: "100%" }}
 					>
-						<div style={{ position: "relative" }} className="comments-container hide-desk">
+						<div
+							style={{ position: "relative" }}
+							className="comments-container hide-desk"
+						>
 							<SplideTrack>
 								<SplideSlide>
 									<div className="comment">
@@ -281,7 +281,7 @@ const Result = () => {
 									</div>
 								</SplideSlide>
 								<SplideSlide>
-									<div className="comment">	
+									<div className="comment">
 										<h3>JEAN-CLAUDE POITRAS</h3>
 										<Quote color="#000000" Width="69px" Height="68px" />
 										{lang === "fr" ? (
@@ -322,14 +322,11 @@ const Result = () => {
 				<section className="collage">
 					{lang === "fr" ? (
 						<h2>
-							{`Les montures Bar à Lunettes Marie-Sophie Dion,`}
-							<br />
-							{`fièrement portées par les québécois et à l'international`}
+							{`Marie-Sophie Dion : une collection québécoise fièrement portée`}
 						</h2>
 					) : (
 						<h2>
-							{`Eyewear Bar à Lunettes Marie-Sophie Dion,`} <br />{" "}
-							{`proudly worn by Quebecois and internationally`}
+							{`Marie-Sophie Dion : a fabulous Quebecois collection`}
 						</h2>
 					)}
 					<div className="collage-container">

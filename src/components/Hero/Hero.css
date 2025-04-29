@@ -155,14 +155,23 @@
         width: 100%;
         margin-top:35.28px;
 
-        & .subtitle{
-          font-size: var(--font-size-xxl);
-          line-height: normal;
-          color: var(--color-primary);
-          text-align: center;
-        }
-        & .subtitle:first-child{
-          text-transform: uppercase;
+        & span{
+          display:flex !important;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          width:100%;
+          max-width: 414px;
+          & .subtitle{
+            font-size: var(--font-size-xxl);
+            line-height: normal;
+            color: var(--color-primary);
+            text-align: center;
+          }
+          & .subtitle:first-child{
+            text-transform: uppercase;
+          }
         }
         & h1{
           font-size: var(--font-size-md);
