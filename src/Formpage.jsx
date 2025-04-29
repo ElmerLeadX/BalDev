@@ -222,14 +222,14 @@ const Formpage = () => {
 							<>
 								<HeadingQuiz
 									title="Your selection of glasses awaits!"
-									subtitle="Enter your email to receive your results"
+									subtitle="Enter your email to receive your results and (why not) an exclusive invitation!"
 								/>
 							</>
 						) : (
 							<>
 								<HeadingQuiz
 									title="Votre sélection de lunettes vous attend!"
-									subtitle="Entrez votre courriel pour recevoir vos résultats"
+									subtitle="Entrez votre courriel pour recevoir vos résultats et (pourquoi pas) une invitation exclusive!"
 								/>
 							</>
 						)}

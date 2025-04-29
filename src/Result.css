@@ -22,7 +22,7 @@ main:has(> div.result-page) {
     padding-bottom:65px;
     & h1 {
       font-family: var(--font-family-primary);
-      font-size:var(--font-size-xxxl);
+      font-size:var(--font-size-xxl);
       font-weight: var(--font-weight-normal);
       color: var(--color-primary);
       text-align: center;
@@ -48,7 +48,7 @@ main:has(> div.result-page) {
     background-color: var(--color-gray);
     & h2{
       font-family: var(--font-family-primary);
-      font-size: var(--font-size-xxxl);
+      font-size: var(--font-size-xxl);
       font-weight: var(--font-weight-normal);
       color: var(--color-primary);
       text-align: center;
@@ -67,7 +67,7 @@ main:has(> div.result-page) {
       & li{
         position:relative;
         font-family: var(--font-family-secondary);
-        font-size:var(--font-size-md);
+        font-size:var(--font-size-sm);
         font-weight: var(--font-weight-normal);
         letter-spacing: 0.2px;
         color: var(--color-primary);
@@ -110,6 +110,7 @@ main:has(> div.result-page) {
           font-family:var(--font-family-secondary);
           font-size:var(--font-size-sm);
           font-weight: var(--font-weight-bold);
+          line-height: 20.64px;
           letter-spacing: 0.2px;
           color: var(--color-primary);
           text-align: left;
@@ -132,6 +133,7 @@ main:has(> div.result-page) {
               font-family:var(--font-family-secondary);
               font-size:var(--font-size-sm);
               font-weight: var(--font-weight-normal);
+              line-height: 20.64px;
               letter-spacing: 0.2px;
               color: var(--color-primary);
               text-align: left;
@@ -146,6 +148,7 @@ main:has(> div.result-page) {
           font-family:var(--font-family-secondary);
           font-size:var(--font-size-sm);
           font-weight: var(--font-weight-bold);
+          line-height: 23.22px;
           letter-spacing: 0.2px;
           color: var(--color-primary);
           text-align: left;
@@ -161,7 +164,7 @@ main:has(> div.result-page) {
           max-width: 456px;
           height: 40px;
           padding: 9.38px 24px;
-          margin-bottom:48px;
+          margin-bottom:31px;
           background-color: var(--color-primary);
           color: var(--color-secondary);
           font-family: var(--font-family-secondary);
@@ -172,7 +175,7 @@ main:has(> div.result-page) {
 
           & svg{
             position:absolute;
-            right:24px;
+            right:48px;
           }
         }
         .btn-secondary{
@@ -222,7 +225,7 @@ main:has(> div.result-page) {
     align-items: center;
     & h2{
       font-family: var(--font-family-primary);
-      font-size: var(--font-size-xxxl);
+      font-size: var(--font-size-xxl);
       font-weight: var(--font-weight-normal);
       color: var(--color-primary);
       text-align: center;
@@ -248,7 +251,7 @@ main:has(> div.result-page) {
         max-width: 456px;
         & h3{
           font-family:var(--font-family-secondary);
-          font-size:var(--font-size-md);
+          font-size:var(--font-size-sm);
           font-weight: var(--font-weight-normal);
           letter-spacing: 0.2px;
           color: var(--color-primary);
@@ -275,14 +278,15 @@ main:has(> div.result-page) {
       gap:58px;
       margin-bottom:65px;
     }
+    
     & .btn-primary{
       position:relative;
       display:flex;
       justify-content:center;
       align-items:center;
-      gap:25px;
+      gap:18px;
       width:100%;
-      max-width: 366px;
+      max-width: 446px;
       height: 40px;
       padding: 9.38px 24px;
       margin-bottom:31px;
@@ -296,8 +300,26 @@ main:has(> div.result-page) {
 
       & svg{
         position:absolute;
-        right:24px;
+        right: 24px;
       }
+    }
+    
+    .btn-secondary{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:16px;
+      width:fit-content;
+      height: 40px;
+      padding: 0 24px;
+      color: var(--color-primary);
+      font-family: var(--font-family-secondary);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-normal);
+      line-height:20px;
+      letter-spacing: 0.2px;
+      text-align: center;
+      text-decoration:underline;
     }
   }
   .collage{
@@ -309,13 +331,13 @@ main:has(> div.result-page) {
 
     & h2{
       font-family: var(--font-family-primary);
-      font-size: var(--font-size-xxxl);
+      font-size: var(--font-size-xxl);
       font-weight: var(--font-weight-normal);
       color: var(--color-primary);
       text-align: center;
       margin-bottom:65px;
       width: 100%;
-      max-width: 756px;
+      max-width: 702px;
     }
     & .collage-container{
       display:grid;

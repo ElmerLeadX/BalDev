@@ -49,16 +49,22 @@ const Result = () => {
 						<h1>{`Discover how we elevated the looks of more than 60,000 Quebecois with perfectly adapted glasses to their traits, style and personality... and how we can do the same for you!`}</h1>
 					)}
 					<div className="results-video">
-						<iframe
+						<video
 							width="100%"
-							height="100%"
-							src="https://www.youtube.com/embed/6CDLgTb3Hec?si=g4Z4ENIsGJDF9NAM"
-							title="YouTube video player"
-							frameBorder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							referrerPolicy="strict-origin-when-cross-origin"
-							allowfullscreen
-						></iframe>
+							height="auto"
+							controls
+							autoPlay
+							muted
+							loop
+							preload="auto"
+						>
+							<source
+								src="https://cdn.shopify.com/videos/c/o/v/ae90bdfe3b2f4d128288d5f1e874f00f.mp4"
+								type="video/mp4"
+							/>
+							<track kind="captions" />
+							Your browser does not support the video tag.
+						</video>
 					</div>
 				</section>
 				<section className="section-gray">
@@ -145,6 +151,7 @@ const Result = () => {
 							)}
 							<a
 								href="https://baralunettes.com/pages/boutiques-bar-a-lunettes"
+								target="_blank"
 								className="btn-primary"
 							>
 								{lang === "fr"
@@ -154,6 +161,7 @@ const Result = () => {
 							</a>
 							<a
 								href="https://baralunettes.as.me/schedule/68ef6492/appointment/40317996/calendar/10722194?appointmentTypeIds[]=40317996"
+								target="_blank"
 								className="btn-secondary"
 							>
 								{lang === "fr"
@@ -225,9 +233,24 @@ const Result = () => {
 							<img src={jeanclaude} alt="Jean-Claude Poitras" />
 						</div>
 					</div>
-					<a href="" className="btn-primary">
-						BARALUNETTES.COM
+					<a
+						href="https://baralunettes.com/pages/boutiques-bar-a-lunettes"
+						target="_blank"
+						className="btn-primary"
+					>
+						{lang === "fr"
+							? `Je veux ma session de stylisme gratuite`
+							: `I want a free styling session`}
 						<Arrow color="#ffffff" />
+					</a>
+					<a
+						href="https://baralunettes.as.me/schedule/68ef6492/appointment/40317996/calendar/10722194?appointmentTypeIds[]=40317996"
+						target="_blank"
+						className="btn-secondary"
+					>
+						{lang === "fr"
+							? `Oui, mais en consultation vidéo`
+							: `Yes, but in video consultation`}
 					</a>
 				</section>
 				<section className="collage">
@@ -235,13 +258,17 @@ const Result = () => {
 						<h2>
 							{`Les montures québécoises`}
 							<br />
-							{`Bar à Lunettes par Marie-Sophie Dion, fièrement portées`}
+							{`Bar à Lunettes par Marie-Sophie Dion,`}
+							<br />
+							{`fièrement portées`}
 						</h2>
 					) : (
 						<h2>
 							{`The Quebec Frames`}
 							<br />
-							{`Bar à Lunettes by Marie-Sophie Dion, proudly worn`}
+							{`Bar à Lunettes by Marie-Sophie Dion,`}
+							<br />
+							{`proudly worn`}
 						</h2>
 					)}
 					<div className="collage-container">
@@ -254,16 +281,13 @@ const Result = () => {
 						<img src={collage2} alt="Collage" />
 						<img src={collage1} alt="Collage" />
 					</div>
-					<a href="" className="btn-primary">
-						{lang === "fr"
-							? `Je veux ma session de stylisme gratuite`
-							: `I want a free styling session`}
+					<a
+						href="https://baralunettes.com/"
+						target="_blank"
+						className="btn-secondary"
+					>
+						BARALUNETTES.COM
 						<Arrow color="#ffffff" />
-					</a>
-					<a href="" className="btn-secondary">
-						{lang === "fr"
-							? `Oui, mais en consultation vidéo`
-							: `Yes, but in video consultation`}
 					</a>
 				</section>
 			</div>
