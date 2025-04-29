@@ -73,7 +73,7 @@ nav{
         }
         & span:nth-child(2){
           font-family: var(--font-family-secondary);
-          font-size: var(--font-size-lg);
+          font-size: var(--font-size-sm);
           font-weight: var(--font-weight-normal);
           letter-spacing: 0.2px;
           color: var(--color-secondary);

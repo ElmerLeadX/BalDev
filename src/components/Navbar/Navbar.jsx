@@ -27,7 +27,7 @@ const Navbar = ({lang, setLang, flag=true, result=false}) => {
 			)}
 			{result && (
 				<div className="message-container">
-					<Cup color="#ffffff" Width="50" Height="73" />
+					<Cup color="#ffffff" Width="38.5" Height="56" />
 					{lang === "fr" ? (
 						<div className="message">
 							<span>Bien joué! Vos résultats sont en route par courriel.</span>
