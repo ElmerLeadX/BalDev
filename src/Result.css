@@ -18,7 +18,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top:calc(30px + 110px);
+    padding-top:0;
     .hero-result{
       display:flex;
       flex-direction: column;
@@ -26,7 +26,7 @@
       align-items: center;
       width: 100%;
       max-width: 456px;
-      padding:0 32px;
+      padding:30px 32px;
       padding-bottom:30px;
       & h1 {
         font-family: var(--font-family-primary);
