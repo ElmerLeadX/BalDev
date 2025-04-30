@@ -31,12 +31,12 @@ const Navbar = ({lang, setLang, flag=true, result=false}) => {
 					{lang === "fr" ? (
 						<div className="message">
 							<span>Bien joué! Vos résultats sont en route par courriel.</span>
-							<span>{`(D’ici quelques minutes, pensez à jeter un œil à vos indésirables, juste au cas où!)`}</span>
+							<span>{`D’ici quelques minutes, pensez à jeter un œil à vos indésirables, juste au cas où!`}</span>
 						</div>
 					) : (
 						<div className="message">
 							<span>Well done! Your results are on the way by email.</span>
-							<span>{`(In a few minutes, be sure to check your spam, just in case!)`}</span>
+							<span>{`In a few minutes, be sure to check your spam, just in case!`}</span>
 						</div>
 					)}
 				</div>

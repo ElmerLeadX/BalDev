@@ -42,16 +42,24 @@ const Result = () => {
 				<Navbar lang={lang} flag={false} result={true} />
 				<section className="hero-result">
 					{lang === "fr" ? (
-						<h1>
-							{`Découvrez comment nous avons élevé le look de plus de 60,000
+						<>
+							<h1>
+								{`Découvrez comment nous avons élevé le look de plus de 60,000
 							québécois grâce à des lunettes parfaitement adaptées à leurs
-							traits, leur style et leur personnalité…`}
-							<br />
-							{` et comment nous pouvons
+							traits, leur style et leur personnalité`}
+							</h1>
+							<h2>
+								{`… et comment nous pouvons
 							faire de même pour vous!`}
-						</h1>
+							</h2>
+						</>
 					) : (
-						<h1>{`Discover how we elevated the looks of more than 60,000 Quebecois with perfectly adapted glasses to their traits, style and personality... and how we can do the same for you!`}</h1>
+						<>
+							<h1>
+								{`Discover how we elevated the looks of more than 60,000 Quebecois with perfectly adapted glasses to their traits, style and personality`}
+							</h1>
+							<h2>{`... and how we can do the same for you!`}</h2>
+						</>
 					)}
 					<div className="results-video">
 						<video
@@ -92,7 +100,7 @@ const Result = () => {
 						<div className="column-1">
 							{lang === "fr" ? (
 								<h3>
-									{`Votre rencontre de 50 minutes avec une opticienne au Bar à lunettes Marie-Sophie Dion inclut:`}
+									{`Votre rencontre de 50 minutes avec un(e) opticien(ne) au Bar à lunettes Marie-Sophie Dion inclut:`}
 								</h3>
 							) : (
 								<h3>{`Your 50-minute meeting with an optician at the Marie-Sophie Dion Eyewear Bar includes:`}</h3>
@@ -250,7 +258,7 @@ const Result = () => {
 							<SplideTrack>
 								<SplideSlide>
 									<div className="comment">
-										<h3>ADNREW MCNALLY</h3>
+										<h3>ANDREW MCNALLY</h3>
 										<Quote color="#000000" Width="69px" Height="68px" />
 										{lang === "fr" ? (
 											<span>
@@ -325,19 +333,17 @@ const Result = () => {
 							{`Marie-Sophie Dion : une collection québécoise fièrement portée`}
 						</h2>
 					) : (
-						<h2>
-							{`Marie-Sophie Dion : a fabulous Quebecois collection`}
-						</h2>
+						<h2>{`Marie-Sophie Dion : a fabulous Quebecois collection`}</h2>
 					)}
 					<div className="collage-container">
-						<img src={collage8} alt="Collage" />
+						<img src={collage1} alt="Collage" />
 						<img src={collage7} alt="Collage" />
 						<img src={collage6} alt="Collage" />
 						<img src={collage5} alt="Collage" />
 						<img src={collage4} alt="Collage" />
 						<img src={collage3} alt="Collage" />
 						<img src={collage2} alt="Collage" />
-						<img src={collage1} alt="Collage" />
+						<img src={collage8} alt="Collage" />
 					</div>
 					<a
 						href="https://baralunettes.com/"

@@ -34,6 +34,16 @@
         font-weight: var(--font-weight-normal);
         color: var(--color-primary);
         text-align: center;
+        margin-bottom:10px;
+        width: 100%;
+        max-width: 936px;
+      }
+      & h2 {
+        font-family: var(--font-family-primary);
+        font-size:var(--font-size-md);
+        font-weight: var(--font-weight-normal);
+        color: var(--color-primary);
+        text-align: center;
         margin-bottom:30px;
         width: 100%;
         max-width: 936px;
@@ -281,8 +291,8 @@
             margin-bottom:30px;
           }
           & img{
-            width:100%;
-            height:auto;
+            width:284.73px;
+            height:284.73px;
             object-fit: cover;
             object-position: center;
           }
@@ -355,11 +365,11 @@
         max-width: 100%;
         margin-bottom:30px;
         & img{
-          width:100%;
-          height:100%;
-          object-fit: cover;
-          object-position: center;
-        }
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        object-position: center;
+      }
       }
       & .btn-primary{
         position:relative;
@@ -459,6 +469,16 @@
         font-weight: var(--font-weight-normal);
         color: var(--color-primary);
         text-align: center;
+        margin-bottom:10px;
+        width: 100%;
+        max-width: 936px;
+      }
+      & h2 {
+        font-family: var(--font-family-primary);
+        font-size:26px;
+        font-weight: var(--font-weight-normal);
+        color: var(--color-primary);
+        text-align: center;
         margin-bottom:45px;
         width: 100%;
         max-width: 936px;
@@ -499,7 +519,7 @@
         & li{
           position:relative;
           font-family: var(--font-family-secondary);
-          font-size:var(--font-size-sm);
+          font-size:var(--font-size-md);
           font-weight: var(--font-weight-normal);
           letter-spacing: 0.2px;
           color: var(--color-primary);
@@ -709,6 +729,13 @@
         justify-content:space-between;
         gap:58px;
         margin-bottom:65px;
+        & img{
+          width:100%;
+          max-width: 284.73px;
+          height:100%;
+          object-fit: cover;
+          object-position: center;
+        }
       }
       
       & .btn-primary{

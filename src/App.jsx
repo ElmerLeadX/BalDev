@@ -43,7 +43,7 @@ function App() {
 				>
 					<Video
 						key={lang}
-						footer="Marie-Sophie Dion, Optician and Founder of Bar à Lunettes"
+						footer="Marie-Sophie Dion, Optician and Founder of the Eyewear Bar"
 						src="https://cdn.shopify.com/videos/c/o/v/4aa049c5c59f4f0bac8fbae099012ccc.mp4"
 					/>
 				</Hero>
