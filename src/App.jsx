@@ -44,7 +44,7 @@ function App() {
 					<Video
 						key={lang}
 						footer="Marie-Sophie Dion, Optician and Founder of Bar à Lunettes"
-						src="https://cdn.shopify.com/videos/c/o/v/581cd04a3f7d4d6e9a7393c81be0a3dd.mp4"
+						src="https://cdn.shopify.com/videos/c/o/v/4aa049c5c59f4f0bac8fbae099012ccc.mp4"
 					/>
 				</Hero>
 			) : (
@@ -62,7 +62,7 @@ function App() {
 					<Video
 						key={lang}
 						footer="Marie-Sophie Dion, Opticienne et Fondatrice des Bar à Lunettes"
-						src="https://cdn.shopify.com/videos/c/o/v/170e582397df48d285378887153e2755.mp4"
+						src="https://cdn.shopify.com/videos/c/o/v/ae3aa2fb83f845f59d3a92773cb15c1a.mp4"
 					/>
 				</Hero>
 			)}
