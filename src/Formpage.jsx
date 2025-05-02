@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Review from "./components/Review/Review";
 import HeadingQuiz from "./components/HeadingQuiz/HeadingQuiz";
 import Form from "./components/Form/Form";
-import formbanner from "./assets/new-form-banner.jpg";
+import formbanner from "./assets/form-banner.webp";
 import { useEffect } from "react";
 import {
 	CreateProfiles,

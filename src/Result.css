@@ -475,7 +475,7 @@
       }
       & h2 {
         font-family: var(--font-family-primary);
-        font-size:26px;
+        font-size:var(--font-size-md);
         font-weight: var(--font-weight-normal);
         color: var(--color-primary);
         text-align: center;
@@ -506,7 +506,7 @@
         text-align: center;
         margin-bottom:21px;
         width: 100%;
-        max-width: 912px;
+        max-width: 899px;
       }
       & ul{
         display:flex;
