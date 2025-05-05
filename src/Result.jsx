@@ -246,7 +246,7 @@ const Result = () => {
 							type: "loop",
 							gap: "1rem",
 							autoplay: true,
-							height: "702px",
+							height: "600px",
 						}}
 						hasTrack={false}
 						style={{ width: "100%" }}
@@ -258,49 +258,55 @@ const Result = () => {
 							<SplideTrack>
 								<SplideSlide>
 									<div className="comment">
-										<h3>ANDREW MCNALLY</h3>
-										<Quote color="#000000" Width="69px" Height="68px" />
-										{lang === "fr" ? (
-											<span>
-												{`« Les lunettes sont l’un des seuls accessoires que vous porterez quotidiennement, le confort est donc primordial. Pourquoi ne pas avoir en plus le plaisir de porter sur le bout de son nez une création unique? »`}
-											</span>
-										) : (
-											<span>
-												{`"Glasses are one of the only accessories you wear daily, comfort is therefore paramount. Why not have the pleasure of wearing on the tip of your nose a unique creation?"`}
-											</span>
-										)}
+										<div>
+											<h3>ANDREW MCNALLY</h3>
+											<Quote color="#000000" Width="69px" Height="68px" />
+											{lang === "fr" ? (
+												<span>
+													{`« Les lunettes sont l’un des seuls accessoires que vous porterez quotidiennement, le confort est donc primordial. Pourquoi ne pas avoir en plus le plaisir de porter sur le bout de son nez une création unique? »`}
+												</span>
+											) : (
+												<span>
+													{`"Glasses are one of the only accessories you wear daily, comfort is therefore paramount. Why not have the pleasure of wearing on the tip of your nose a unique creation?"`}
+												</span>
+											)}
+										</div>
 										<img src={andrew} alt="Andrew McNally" />
 									</div>
 								</SplideSlide>
 								<SplideSlide>
 									<div className="comment">
-										<h3>JOSÉE DARCHE</h3>
-										<Quote color="#000000" Width="69px" Height="68px" />
-										{lang === "fr" ? (
-											<span>
-												{`« Un grand merci pour cette monture conçue avec passion. Au Bar à Lunettes, chaque détail, chaque geste, est top niveau. »`}
-											</span>
-										) : (
-											<span>
-												{`"Thank you for this frame designed with passion. At the Eyewear Bar, every detail, every gesture, is top notch."`}
-											</span>
-										)}
+										<div>
+											<h3>JOSÉE DARCHE</h3>
+											<Quote color="#000000" Width="69px" Height="68px" />
+											{lang === "fr" ? (
+												<span>
+													{`« Un grand merci pour cette monture conçue avec passion. Au Bar à Lunettes, chaque détail, chaque geste, est top niveau. »`}
+												</span>
+											) : (
+												<span>
+													{`"Thank you for this frame designed with passion. At the Eyewear Bar, every detail, every gesture, is top notch."`}
+												</span>
+											)}
+										</div>
 										<img src={josee} alt="Josee Darche" />
 									</div>
 								</SplideSlide>
 								<SplideSlide>
 									<div className="comment">
-										<h3>JEAN-CLAUDE POITRAS</h3>
-										<Quote color="#000000" Width="69px" Height="68px" />
-										{lang === "fr" ? (
-											<span>
-												{`« Le succès toujours grandissant de cette griffe, tant auprès du grand public que de l’élite du monde des affaires et du milieu artistique, est remarquable. Cette créatrice inspirée, doublée d’une femme d’affaires avisée, n’a pas fini de surprendre. »`}
-											</span>
-										) : (
-											<span>
-												{`"The ever-growing success of this brand, both among the general public and the elite of the business and artistic world, is remarkable. This inspired creator, coupled with a savvy businesswoman, is sure to surprise."`}
-											</span>
-										)}
+										<div>
+											<h3>JEAN-CLAUDE POITRAS</h3>
+											<Quote color="#000000" Width="69px" Height="68px" />
+											{lang === "fr" ? (
+												<span>
+													{`« Le succès toujours grandissant de cette griffe, tant auprès du grand public que de l’élite du monde des affaires et du milieu artistique, est remarquable. Cette créatrice inspirée, doublée d’une femme d’affaires avisée, n’a pas fini de surprendre. »`}
+												</span>
+											) : (
+												<span>
+													{`"The ever-growing success of this brand, both among the general public and the elite of the business and artistic world, is remarkable. This inspired creator, coupled with a savvy businesswoman, is sure to surprise."`}
+												</span>
+											)}
+										</div>
 										<img src={jeanclaude} alt="Jean-Claude Poitras" />
 									</div>
 								</SplideSlide>
