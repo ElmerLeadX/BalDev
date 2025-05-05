@@ -10,6 +10,9 @@ function App() {
 	const navigate = useNavigate();
 	const data = useContext(QuizContext);
 	const [lang, setLang] = useState("fr");
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	useEffect(() => {
 		const urlemail = getURLEmail();

@@ -25,6 +25,9 @@ import "@splidejs/react-splide/css";
 const Result = () => {
 	const data = useContext(QuizContext);
 	const [lang, setLang] = useState("fr");
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	useEffect(() => {
 		if (data.lang === "en") {

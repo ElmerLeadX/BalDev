@@ -22,6 +22,9 @@ const Formpage = () => {
 	const data = useContext(QuizContext);
 	const [lang, setLang] = useState("fr");
 	const [sent, setSent] = useState(false);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	useEffect(() => {
 		if (data.lang === "en") {

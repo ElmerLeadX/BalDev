@@ -1,6 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+	createBrowserRouter,
+	RouterProvider,
+	ScrollRestoration,
+} from "react-router-dom";
 import App from "./App.jsx";
 import Gender from "./Gender.jsx";
 import Quiz from "./Quiz.jsx";
@@ -33,6 +37,14 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
-		<RouterProvider router={router} />
+		<RouterProvider
+			router={router}
+			future={{
+				v7_startTransition: true,
+				v7_relativeSplatPath: true,
+			}}
+		>
+			<ScrollRestoration />
+		</RouterProvider>
 	</StrictMode>
 );
