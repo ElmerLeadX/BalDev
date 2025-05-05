@@ -351,7 +351,6 @@ const Result = () => {
 						className="btn-secondary"
 					>
 						BARALUNETTES.COM
-						<Arrow color="#ffffff" />
 					</a>
 				</section>
 			</div>

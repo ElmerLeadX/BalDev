@@ -24,6 +24,7 @@
       line-height: normal;
       color: var(--color-primary);
       text-align: center;
+      justify-content: center;
     }
 
     & .section-video{
@@ -32,7 +33,7 @@
       gap: 20px;
       width: 100%;
       max-width: 428px;
-      aspect-ratio: 16/9;
+      aspect-ratio: 4/4;
     }
     
     & .column-2{

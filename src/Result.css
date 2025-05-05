@@ -57,7 +57,7 @@
     }
     .section-gray{
       width: 100%;
-      padding:65px 32px 65px 32px;
+      padding:30px 32px 30px 32px;
       display:flex;
       flex-direction: column;
       justify-content: center;
@@ -81,7 +81,7 @@
         align-items:center;
         width:100%;
         max-width: 456px;
-        margin-bottom:65px;
+        margin-bottom:30px;
         & li{
           position:relative;
           font-family: var(--font-family-secondary);
@@ -169,7 +169,7 @@
             line-height: 23.22px;
             letter-spacing: 0.2px;
             color: var(--color-primary);
-            text-align: left;
+            text-align: center;
             margin-bottom:30px;
           }
           .btn-primary{
@@ -264,9 +264,8 @@
         & .comment{
           display:flex;
           flex-flow:column;
-          justify-content: space-between;
           align-items: center;
-          width: 70%;
+          width: 90%;
           height: calc(100% - 50px);
           margin:0 auto;
           & h3{
@@ -360,7 +359,7 @@
       }
       & .collage-container{
         display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(182px, 1fr));
+        grid-template-columns: 1fr 1fr;
         width: 100%;
         max-width: 100%;
         margin-bottom:30px;

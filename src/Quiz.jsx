@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import { QuizContext } from "./lib/quizContext";
-import Navbar from "./components/Navbar/Navbar";
 import Pagination from "./components/Pagination/Pagination";
 import Progressbar from "./components/Progressbar/Progressbar";
 import Question from "./components/Question/Question";
@@ -49,7 +48,6 @@ const Quiz = () => {
 	};
 	return (
 		<QuizContext.Provider value={data}>
-			<Navbar lang={lang} flag={false} />
 			<article>
 				<Pagination currentPage={page + 1} totalPages={TOTAL_PAGES + 1} />
 				<Progressbar progress={(100 / (TOTAL_PAGES + 1)) * (page + 1)} />

@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { QuizContext } from "./lib/quizContext";
-import Navbar from "./components/Navbar/Navbar";
 import Review from "./components/Review/Review";
 import HeadingQuiz from "./components/HeadingQuiz/HeadingQuiz";
 import Form from "./components/Form/Form";
@@ -211,7 +210,6 @@ const Formpage = () => {
 
 	return (
 		<QuizContext.Provider value={data}>
-			<Navbar lang={lang} flag={false} />
 			<section className="main-container form-page">
 				<div className="form-container">
 					<div className="form-banner">
