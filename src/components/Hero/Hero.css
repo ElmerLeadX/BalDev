@@ -25,6 +25,7 @@
       color: var(--color-primary);
       text-align: center;
       justify-content: center;
+      flex-flow: column;
     }
 
     & .section-video{
