@@ -704,10 +704,11 @@
         & .comment{
           display:flex;
           flex-flow:column;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
           width:100%;
           max-width: 456px;
+          height: 100%;
           & h3{
             font-family:var(--font-family-secondary);
             font-size:var(--font-size-sm);
