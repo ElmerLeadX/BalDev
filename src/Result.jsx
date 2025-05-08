@@ -2,11 +2,10 @@ import { useEffect, useState, useContext } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { QuizContext } from "./lib/quizContext";
 import "./Result.css";
-import Glasses from "./components/Glasses/Glasses";
+import Cup from "./components/Cup/Cup";
 import Arrow from "./components/Arrow/Arrow";
 import femaleglasses from "./assets/femaleglasses.webp";
 import lensracks from "./assets/lensracks.webp";
-import Quote from "./components/Quote/Quote";
 import josee from "./assets/josee.webp";
 import andrew from "./assets/andrew.webp";
 import jeanclaude from "./assets/jean-claude.webp";
@@ -52,7 +51,7 @@ const Result = () => {
 							traits, leur style et leur personnalité`}
 							</h1>
 							<h2>
-								{`… et comment nous pouvons
+								{`et comment nous pouvons
 							faire de même pour vous!`}
 							</h2>
 						</>
@@ -61,7 +60,7 @@ const Result = () => {
 							<h1>
 								{`Discover how we elevated the looks of more than 60,000 Quebecois with perfectly adapted glasses to their traits, style and personality`}
 							</h1>
-							<h2>{`... and how we can do the same for you!`}</h2>
+							<h2>{`and how we can do the same for you!`}</h2>
 						</>
 					)}
 					<div className="results-video">
@@ -98,6 +97,7 @@ const Result = () => {
 						<li>Saint-Lambert</li>
 						<li>{lang === "fr" ? "Québec" : "Quebec"}</li>
 						<li>Bromont</li>
+						<li>Sherbrooke</li>
 					</ul>
 					<div className="columns-2">
 						<div className="column-1">
@@ -110,7 +110,7 @@ const Result = () => {
 							)}
 							<div className="blurb-container">
 								<div className="blurb">
-									<Glasses color="#000000" Width="29px" Height="29px" />
+									<Cup color="#000000" Width="29px" Height="32px" />
 									{lang === "fr" ? (
 										<span>
 											{`Une analyse complète des différentes personnalités que vous souhaitez projeter, selon votre style et vos activités.`}
@@ -122,7 +122,7 @@ const Result = () => {
 									)}
 								</div>
 								<div className="blurb">
-									<Glasses color="#000000" Width="29px" Height="29px" />
+									<Cup color="#000000" Width="29px" Height="32px" />
 									{lang === "fr" ? (
 										<span>
 											{`La prise de mesures précises selon la méthode MSD pour garantir une monture et une vision parfaites`}
@@ -134,7 +134,7 @@ const Result = () => {
 									)}
 								</div>
 								<div className="blurb">
-									<Glasses color="#000000" Width="29px" Height="29px" />
+									<Cup color="#000000" Width="29px" Height="32px" />
 									{lang === "fr" ? (
 										<span>
 											{`Un tableau de couleurs, de matériaux et de formes de montures, établi selon votre teint, vos cheveux et les traits de votre visage.`}
@@ -146,7 +146,7 @@ const Result = () => {
 									)}
 								</div>
 								<div className="blurb">
-									<Glasses color="#000000" Width="29px" Height="29px" />
+									<Cup color="#000000" Width="29px" Height="32px" />
 									{lang === "fr" ? (
 										<span>
 											{`Une garantie de satisfaction sans compromis en matière de style, d’adaptation et de durabilité.`}
@@ -192,47 +192,6 @@ const Result = () => {
 					</div>
 				</section>
 				<section className="comments">
-					<div className="comments-container hide-mob">
-						<div className="comment">
-							<h3>ADNREW MCNALLY</h3>
-							<Quote color="#000000" Width="69px" Height="68px" />
-							{lang === "fr" ? (
-								<span>
-									{`« Les lunettes sont l’un des seuls accessoires que vous porterez quotidiennement, le confort est donc primordial. Pourquoi ne pas avoir en plus le plaisir de porter sur le bout de son nez une création unique? »`}
-								</span>
-							) : (
-								<span>
-									{`"Glasses are one of the only accessories you wear daily, comfort is therefore paramount. Why not have the pleasure of wearing on the tip of your nose a unique creation?"`}
-								</span>
-							)}
-						</div>
-						<div className="comment">
-							<h3>JOSÉE DARCHE</h3>
-							<Quote color="#000000" Width="69px" Height="68px" />
-							{lang === "fr" ? (
-								<span>
-									{`« Un grand merci pour cette monture conçue avec passion. Au Bar à Lunettes, chaque détail, chaque geste, est top niveau. »`}
-								</span>
-							) : (
-								<span>
-									{`"Thank you for this frame designed with passion. At the Eyewear Bar, every detail, every gesture, is top notch."`}
-								</span>
-							)}
-						</div>
-						<div className="comment">
-							<h3>JEAN-CLAUDE POITRAS</h3>
-							<Quote color="#000000" Width="69px" Height="68px" />
-							{lang === "fr" ? (
-								<span>
-									{`« Le succès toujours grandissant de cette griffe, tant auprès du grand public que de l’élite du monde des affaires et du milieu artistique, est remarquable. Cette créatrice inspirée, doublée d’une femme d’affaires avisée, n’a pas fini de surprendre. »`}
-								</span>
-							) : (
-								<span>
-									{`"The ever-growing success of this brand, both among the general public and the elite of the business and artistic world, is remarkable. This inspired creator, coupled with a savvy businesswoman, is sure to surprise."`}
-								</span>
-							)}
-						</div>
-					</div>
 					<div className="img-comments-container hide-mob">
 						<div>
 							<img src={andrew} alt="Andrew McNally" />
@@ -242,6 +201,44 @@ const Result = () => {
 						</div>
 						<div>
 							<img src={jeanclaude} alt="Jean-Claude Poitras" />
+						</div>
+					</div>
+					<div className="comments-container hide-mob">
+						<div className="comment">
+							{lang === "fr" ? (
+								<span>
+									{`« Les lunettes sont l’un des seuls accessoires que vous porterez quotidiennement, le confort est donc primordial. Pourquoi ne pas avoir en plus le plaisir de porter sur le bout de son nez une création unique? »`}
+								</span>
+							) : (
+								<span>
+									{`"Glasses are one of the only accessories you wear daily, comfort is therefore paramount. Why not have the pleasure of wearing on the tip of your nose a unique creation?"`}
+								</span>
+							)}
+							<h3>ADNREW MCNALLY</h3>
+						</div>
+						<div className="comment">
+							{lang === "fr" ? (
+								<span>
+									{`« Un grand merci pour cette monture conçue avec passion. Au Bar à Lunettes, chaque détail, chaque geste, est top niveau. »`}
+								</span>
+							) : (
+								<span>
+									{`"Thank you for this frame designed with passion. At the Eyewear Bar, every detail, every gesture, is top notch."`}
+								</span>
+							)}
+							<h3>JOSÉE DARCHE</h3>
+						</div>
+						<div className="comment">
+							{lang === "fr" ? (
+								<span>
+									{`« Le succès toujours grandissant de cette griffe, tant auprès du grand public que de l’élite du monde des affaires et du milieu artistique, est remarquable. Cette créatrice inspirée, doublée d’une femme d’affaires avisée, n’a pas fini de surprendre. »`}
+								</span>
+							) : (
+								<span>
+									{`"The ever-growing success of this brand, both among the general public and the elite of the business and artistic world, is remarkable. This inspired creator, coupled with a savvy businesswoman, is sure to surprise."`}
+								</span>
+							)}
+							<h3>JEAN-CLAUDE POITRAS</h3>
 						</div>
 					</div>
 					<Splide
@@ -261,9 +258,8 @@ const Result = () => {
 							<SplideTrack>
 								<SplideSlide>
 									<div className="comment">
+										<img src={andrew} alt="Andrew McNally" />
 										<div>
-											<h3>ANDREW MCNALLY</h3>
-											<Quote color="#000000" Width="69px" Height="68px" />
 											{lang === "fr" ? (
 												<span>
 													{`« Les lunettes sont l’un des seuls accessoires que vous porterez quotidiennement, le confort est donc primordial. Pourquoi ne pas avoir en plus le plaisir de porter sur le bout de son nez une création unique? »`}
@@ -273,15 +269,14 @@ const Result = () => {
 													{`"Glasses are one of the only accessories you wear daily, comfort is therefore paramount. Why not have the pleasure of wearing on the tip of your nose a unique creation?"`}
 												</span>
 											)}
+											<h3>ANDREW MCNALLY</h3>
 										</div>
-										<img src={andrew} alt="Andrew McNally" />
 									</div>
 								</SplideSlide>
 								<SplideSlide>
 									<div className="comment">
+										<img src={josee} alt="Josee Darche" />
 										<div>
-											<h3>JOSÉE DARCHE</h3>
-											<Quote color="#000000" Width="69px" Height="68px" />
 											{lang === "fr" ? (
 												<span>
 													{`« Un grand merci pour cette monture conçue avec passion. Au Bar à Lunettes, chaque détail, chaque geste, est top niveau. »`}
@@ -291,15 +286,14 @@ const Result = () => {
 													{`"Thank you for this frame designed with passion. At the Eyewear Bar, every detail, every gesture, is top notch."`}
 												</span>
 											)}
+											<h3>JOSÉE DARCHE</h3>
 										</div>
-										<img src={josee} alt="Josee Darche" />
 									</div>
 								</SplideSlide>
 								<SplideSlide>
 									<div className="comment">
+										<img src={jeanclaude} alt="Jean-Claude Poitras" />
 										<div>
-											<h3>JEAN-CLAUDE POITRAS</h3>
-											<Quote color="#000000" Width="69px" Height="68px" />
 											{lang === "fr" ? (
 												<span>
 													{`« Le succès toujours grandissant de cette griffe, tant auprès du grand public que de l’élite du monde des affaires et du milieu artistique, est remarquable. Cette créatrice inspirée, doublée d’une femme d’affaires avisée, n’a pas fini de surprendre. »`}
@@ -309,8 +303,8 @@ const Result = () => {
 													{`"The ever-growing success of this brand, both among the general public and the elite of the business and artistic world, is remarkable. This inspired creator, coupled with a savvy businesswoman, is sure to surprise."`}
 												</span>
 											)}
+											<h3>JEAN-CLAUDE POITRAS</h3>
 										</div>
-										<img src={jeanclaude} alt="Jean-Claude Poitras" />
 									</div>
 								</SplideSlide>
 							</SplideTrack>

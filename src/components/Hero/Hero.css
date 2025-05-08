@@ -208,6 +208,7 @@
           font-weight: var(--font-weight-normal);
           line-height: normal;
           color: var(--color-secondary);
+          cursor: pointer;
 
           & svg{
             position: absolute;
