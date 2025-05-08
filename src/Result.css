@@ -700,7 +700,7 @@
         width:100%;
         max-width: 936px;
         gap: 58px;
-        margin-bottom:43px;
+        margin-bottom:65px;
         & .comment{
           display:flex;
           flex-flow:column;

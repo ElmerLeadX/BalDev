@@ -92,12 +92,12 @@ const Result = () => {
 						<h2>{`Enjoy your private styling session and find the perfect frame`}</h2>
 					)}
 					<ul className="store-list">
+						<li>Sherbrooke</li>
 						<li>Laval</li>
 						<li>Montreal</li>
 						<li>Saint-Lambert</li>
 						<li>{lang === "fr" ? "Québec" : "Quebec"}</li>
 						<li>Bromont</li>
-						<li>Sherbrooke</li>
 					</ul>
 					<div className="columns-2">
 						<div className="column-1">
