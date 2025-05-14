@@ -21,6 +21,9 @@ const Question = ({question, option1, option2, optionText, optionText2, prevPage
     data.answers[page - 1] = option;
     setShowNextPage(true);
     setActive(option);
+    if(page < totalPages){
+      nextPage();
+    }
   }
   const resultPage = async () => {
     if(data.email.length == 0){

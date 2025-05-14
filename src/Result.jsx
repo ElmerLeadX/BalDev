@@ -257,12 +257,21 @@ const Result = () => {
 							<img src={josee} alt="Josee Darche" />
 						</div>
 						<div>
-							<img src={jeanclaude} alt="Jean-Claude Poitras" />
+							<img
+								src={jeanclaude}
+								alt="Jean-Claude Poitras"
+								style={{ transform: "scaleX(-1)" }}
+							/>
 						</div>
 					</div>
 					<div className="comments-container hide-mob">
 						<div className="comment">
 							<h3>ANDREW MCNALLY</h3>
+							{lang === "fr" ? (
+								<small>Chroniqueur mode, Journal de Montréal</small>
+							) : (
+								<small>Fashion Columnist, Journal de Montreal</small>
+							)}
 							{lang === "fr" ? (
 								<span>
 									{`« Les lunettes sont l’un des seuls accessoires que vous porterez quotidiennement, le confort est donc primordial. Pourquoi ne pas avoir en plus le plaisir de porter sur le bout de son nez une création unique? »`}
@@ -276,6 +285,11 @@ const Result = () => {
 						<div className="comment">
 							<h3>NATHALIE CLARKE</h3>
 							{lang === "fr" ? (
+								<small>Présentatrice météo, TVA Québec</small>
+							) : (
+								<small>Weather Presenter, TVQ Quebec</small>
+							)}
+							{lang === "fr" ? (
 								<span>
 									{`« Pour moi, le choix est clair : c’est le Bar à lunettes par Marie-Sophie Dion. Des montures qui épousent parfaitement ma morphologie, des designs audacieux, un éventail de couleurs inspirant et un service personnalisé d’exception. C’est du design, du confort, du sur-mesure. Bref, une expérience à part. Impossible de repartir avec une seule paire! »`}
 								</span>
@@ -287,6 +301,11 @@ const Result = () => {
 						</div>
 						<div className="comment">
 							<h3>JEAN-CLAUDE POITRAS</h3>
+							{lang === "fr" ? (
+								<small>Designer de mode canadien</small>
+							) : (
+								<small>Canadian Fashion Designer</small>
+							)}
 							{lang === "fr" ? (
 								<span>
 									{`« Le succès toujours grandissant de cette griffe, tant auprès du grand public que de l’élite du monde des affaires et du milieu artistique, est remarquable. Cette créatrice inspirée, doublée d’une femme d’affaires avisée, n’a pas fini de surprendre. »`}
@@ -319,6 +338,11 @@ const Result = () => {
 										<div>
 											<h3>ANDREW MCNALLY</h3>
 											{lang === "fr" ? (
+												<small>Chroniqueur mode, Journal de Montréal</small>
+											) : (
+												<small>Fashion Columnist, Journal de Montreal</small>
+											)}
+											{lang === "fr" ? (
 												<span>
 													{`« Les lunettes sont l’un des seuls accessoires que vous porterez quotidiennement, le confort est donc primordial. Pourquoi ne pas avoir en plus le plaisir de porter sur le bout de son nez une création unique? »`}
 												</span>
@@ -336,6 +360,11 @@ const Result = () => {
 										<div>
 											<h3>NATHALIE CLARKE</h3>
 											{lang === "fr" ? (
+												<small>Présentatrice météo, TVA Québec</small>
+											) : (
+												<small>Weather Presenter, TVQ Quebec</small>
+											)}
+											{lang === "fr" ? (
 												<span>
 													{`« Pour moi, le choix est clair : c’est le Bar à lunettes par Marie-Sophie Dion. Des montures qui épousent parfaitement ma morphologie, des designs audacieux, un éventail de couleurs inspirant et un service personnalisé d’exception. C’est du design, du confort, du sur-mesure. Bref, une expérience à part. Impossible de repartir avec une seule paire! »`}
 												</span>
@@ -349,9 +378,18 @@ const Result = () => {
 								</SplideSlide>
 								<SplideSlide>
 									<div className="comment">
-										<img src={jeanclaude} alt="Jean-Claude Poitras" />
+										<img
+											src={jeanclaude}
+											alt="Jean-Claude Poitras"
+											style={{ transform: "scaleX(-1)" }}
+										/>
 										<div>
 											<h3>JEAN-CLAUDE POITRAS</h3>
+											{lang === "fr" ? (
+												<small>Designer de mode canadien</small>
+											) : (
+												<small>Canadian Fashion Designer</small>
+											)}
 											{lang === "fr" ? (
 												<span>
 													{`« Le succès toujours grandissant de cette griffe, tant auprès du grand public que de l’élite du monde des affaires et du milieu artistique, est remarquable. Cette créatrice inspirée, doublée d’une femme d’affaires avisée, n’a pas fini de surprendre. »`}
