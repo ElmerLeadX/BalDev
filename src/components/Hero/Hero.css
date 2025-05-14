@@ -233,7 +233,7 @@
         & .review-quote{
           & p{
             font-family: var(--font-family-secondary);
-            font-size: var(--font-size-xsm);
+            font-size: 13px;
             font-weight: var(--font-weight-normal);
             line-height: normal;
             color: var(--color-primary);

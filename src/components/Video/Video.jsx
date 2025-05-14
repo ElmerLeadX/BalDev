@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from "react";
-import videocover from "../../assets/video-cover.png";
+import { useState, useEffect, useRef } from "react";
+import Audio from "../Audio/Audio";
 import "./Video.css";
-const Video = ({ src, footer }) => {
+const Video = ({ src, footer, btn }) => {
+	const videoRef = useRef(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
   useEffect(() => {
     const handleResize = () => {
@@ -12,9 +13,38 @@ const Video = ({ src, footer }) => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
 	}, []);
+
+	const handleclick = () => {
+		const video = videoRef.current;
+		if (video) {
+			video.muted = video.muted ? false : true;
+			if (video.paused) {
+				video.play(); // asegurarse que está reproduciendo
+			}
+		}
+	}
   return isMobile ? (
 		<section className="section-video">
-			<video width="100%" height="auto" controls muted poster={videocover}>
+			<span
+				className="video-cover"
+				onClick={() => {
+					handleclick();
+				}}
+			>
+				<Audio color="#000000" Width="16" Height="16" />
+				<span>{btn}</span>
+			</span>
+			<video
+				ref={videoRef}
+				width="100%"
+				height="auto"
+				controls
+				autoPlay
+				muted
+				loop
+				controlsList="nodownload"
+				preload="auto"
+			>
 				<source src={src} type="video/mp4" />
 				<track kind="captions" />
 				Your browser does not support the video tag.
@@ -22,13 +52,24 @@ const Video = ({ src, footer }) => {
 		</section>
 	) : (
 		<section className="section-video">
+			<span
+				className="video-cover"
+				onClick={() => {
+					handleclick();
+				}}
+			>
+				<Audio color="#000000" Width="16" Height="16" />
+				<span>{btn}</span>
+			</span>
 			<video
+				ref={videoRef}
 				width="100%"
 				height="auto"
 				controls
 				autoPlay
 				muted
 				loop
+				controlsList="nodownload"
 				preload="auto"
 			>
 				<source src={src} type="video/mp4" />

@@ -1,9 +1,10 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext, useRef } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { QuizContext } from "./lib/quizContext";
 import "./Result.css";
 import Cup from "./components/Cup/Cup";
 import Arrow from "./components/Arrow/Arrow";
+import Audio from "./components/Audio/Audio";
 import femaleglasses from "./assets/femaleglasses.webp";
 import lensracks from "./assets/lensracks.webp";
 import josee from "./assets/josee.webp";
@@ -22,6 +23,7 @@ import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
 const Result = () => {
+	const videoRef = useRef(null);
 	const data = useContext(QuizContext);
 	const [lang, setLang] = useState("fr");
 	useEffect(() => {
@@ -37,6 +39,16 @@ const Result = () => {
 			setLang("fr");
 		}
 	}, [data.lang, setLang]);
+
+	const handleclick = () => {
+		const video = videoRef.current;
+		if (video) {
+			video.muted = video.muted ? false : true;
+			if (video.paused) {
+				video.play(); // asegurarse que está reproduciendo
+			}
+		}
+	};
 
 	return (
 		<QuizContext.Provider value={data}>
@@ -64,22 +76,67 @@ const Result = () => {
 						</>
 					)}
 					<div className="results-video">
-						<video
-							width="100%"
-							height="auto"
-							controls
-							autoPlay
-							muted
-							loop
-							preload="auto"
-						>
-							<source
-								src="https://cdn.shopify.com/videos/c/o/v/ae90bdfe3b2f4d128288d5f1e874f00f.mp4"
-								type="video/mp4"
-							/>
-							<track kind="captions" />
-							Your browser does not support the video tag.
-						</video>
+						{lang === "fr" ? (
+							<>
+								<span
+									className="video-cover"
+									onClick={() => {
+										handleclick();
+									}}
+								>
+									<Audio color="#000000" Width="16" Height="16" />
+									<span>Cliquez pour le son</span>
+								</span>
+								<video
+									ref={videoRef}
+									width="100%"
+									height="auto"
+									controls
+									autoPlay
+									muted
+									loop
+									controlsList="nodownload"
+									preload="auto"
+								>
+									<source
+										src="https://cdn.shopify.com/videos/c/o/v/f167c1501bc046ea9f518c26b4e5791d.mp4"
+										type="video/mp4"
+									/>
+									<track kind="captions" />
+									Your browser does not support the video tag.
+								</video>
+							</>
+						) : (
+							<>
+								<span
+									className="video-cover"
+									onClick={() => {
+										handleclick();
+									}}
+								>
+									<Audio color="#000000" Width="16" Height="16" />
+									<span>Click to listen</span>
+								</span>
+								<video
+									ref={videoRef}
+									width="100%"
+									height="auto"
+									controls
+									autoPlay
+									muted
+									loop
+									controlsList="nodownload"
+									preload="auto"
+								>
+									<source
+										src="https://cdn.shopify.com/videos/c/o/v/f167c1501bc046ea9f518c26b4e5791d.mp4"
+										type="video/mp4"
+									/>
+									<track kind="captions" />
+									Your browser does not support the video tag.
+								</video>
+							</>
+						)}
 					</div>
 				</section>
 				<section className="section-gray">
@@ -166,7 +223,7 @@ const Result = () => {
 								<h4>{`Don't wait! Book your FREE 50-minute consultation in person with an expert at the Eyewear Bar.`}</h4>
 							)}
 							<a
-								href="https://baralunettes.com/pages/boutiques-bar-a-lunettes"
+								href="https://baralunettes.as.me/?appointmentType=70119236"
 								target="_blank"
 								className="btn-primary"
 							>
@@ -176,7 +233,7 @@ const Result = () => {
 								<Arrow color="#ffffff" />
 							</a>
 							<a
-								href="https://baralunettes.as.me/schedule/68ef6492/appointment/40317996/calendar/10722194?appointmentTypeIds[]=40317996"
+								href="https://baralunettes.as.me/?appointmentType=40317996"
 								target="_blank"
 								className="btn-secondary"
 							>
@@ -205,6 +262,7 @@ const Result = () => {
 					</div>
 					<div className="comments-container hide-mob">
 						<div className="comment">
+							<h3>ANDREW MCNALLY</h3>
 							{lang === "fr" ? (
 								<span>
 									{`« Les lunettes sont l’un des seuls accessoires que vous porterez quotidiennement, le confort est donc primordial. Pourquoi ne pas avoir en plus le plaisir de porter sur le bout de son nez une création unique? »`}
@@ -214,21 +272,21 @@ const Result = () => {
 									{`"Glasses are one of the only accessories you wear daily, comfort is therefore paramount. Why not have the pleasure of wearing on the tip of your nose a unique creation?"`}
 								</span>
 							)}
-							<h3>ADNREW MCNALLY</h3>
 						</div>
 						<div className="comment">
+							<h3>NATHALIE CLARKE</h3>
 							{lang === "fr" ? (
 								<span>
-									{`« Un grand merci pour cette monture conçue avec passion. Au Bar à Lunettes, chaque détail, chaque geste, est top niveau. »`}
+									{`« Pour moi, le choix est clair : c’est le Bar à lunettes par Marie-Sophie Dion. Des montures qui épousent parfaitement ma morphologie, des designs audacieux, un éventail de couleurs inspirant et un service personnalisé d’exception. C’est du design, du confort, du sur-mesure. Bref, une expérience à part. Impossible de repartir avec une seule paire! »`}
 								</span>
 							) : (
 								<span>
-									{`"Thank you for this frame designed with passion. At the Eyewear Bar, every detail, every gesture, is top notch."`}
+									{`"For me, the choice is clear: the Eyewear Bar by Marie-Sophie Dion. The frames are a perfect match for my features—bold in design, rich in color, and paired with truly exceptional, personalized service. It’s the perfect blend of style, comfort, and custom craftsmanship. An experience unlike any other. Honestly, walking out with just one pair? Impossible!"`}
 								</span>
 							)}
-							<h3>JOSÉE DARCHE</h3>
 						</div>
 						<div className="comment">
+							<h3>JEAN-CLAUDE POITRAS</h3>
 							{lang === "fr" ? (
 								<span>
 									{`« Le succès toujours grandissant de cette griffe, tant auprès du grand public que de l’élite du monde des affaires et du milieu artistique, est remarquable. Cette créatrice inspirée, doublée d’une femme d’affaires avisée, n’a pas fini de surprendre. »`}
@@ -238,7 +296,6 @@ const Result = () => {
 									{`"The ever-growing success of this brand, both among the general public and the elite of the business and artistic world, is remarkable. This inspired creator, coupled with a savvy businesswoman, is sure to surprise."`}
 								</span>
 							)}
-							<h3>JEAN-CLAUDE POITRAS</h3>
 						</div>
 					</div>
 					<Splide
@@ -246,7 +303,7 @@ const Result = () => {
 							type: "loop",
 							gap: "1rem",
 							autoplay: true,
-							height: "600px",
+							height: "530px",
 						}}
 						hasTrack={false}
 						style={{ width: "100%" }}
@@ -260,6 +317,7 @@ const Result = () => {
 									<div className="comment">
 										<img src={andrew} alt="Andrew McNally" />
 										<div>
+											<h3>ANDREW MCNALLY</h3>
 											{lang === "fr" ? (
 												<span>
 													{`« Les lunettes sont l’un des seuls accessoires que vous porterez quotidiennement, le confort est donc primordial. Pourquoi ne pas avoir en plus le plaisir de porter sur le bout de son nez une création unique? »`}
@@ -269,7 +327,6 @@ const Result = () => {
 													{`"Glasses are one of the only accessories you wear daily, comfort is therefore paramount. Why not have the pleasure of wearing on the tip of your nose a unique creation?"`}
 												</span>
 											)}
-											<h3>ANDREW MCNALLY</h3>
 										</div>
 									</div>
 								</SplideSlide>
@@ -277,16 +334,16 @@ const Result = () => {
 									<div className="comment">
 										<img src={josee} alt="Josee Darche" />
 										<div>
+											<h3>NATHALIE CLARKE</h3>
 											{lang === "fr" ? (
 												<span>
-													{`« Un grand merci pour cette monture conçue avec passion. Au Bar à Lunettes, chaque détail, chaque geste, est top niveau. »`}
+													{`« Pour moi, le choix est clair : c’est le Bar à lunettes par Marie-Sophie Dion. Des montures qui épousent parfaitement ma morphologie, des designs audacieux, un éventail de couleurs inspirant et un service personnalisé d’exception. C’est du design, du confort, du sur-mesure. Bref, une expérience à part. Impossible de repartir avec une seule paire! »`}
 												</span>
 											) : (
 												<span>
-													{`"Thank you for this frame designed with passion. At the Eyewear Bar, every detail, every gesture, is top notch."`}
+													{`"For me, the choice is clear: the Eyewear Bar by Marie-Sophie Dion. The frames are a perfect match for my features—bold in design, rich in color, and paired with truly exceptional, personalized service. It’s the perfect blend of style, comfort, and custom craftsmanship. An experience unlike any other. Honestly, walking out with just one pair? Impossible!"`}
 												</span>
 											)}
-											<h3>JOSÉE DARCHE</h3>
 										</div>
 									</div>
 								</SplideSlide>
@@ -294,6 +351,7 @@ const Result = () => {
 									<div className="comment">
 										<img src={jeanclaude} alt="Jean-Claude Poitras" />
 										<div>
+											<h3>JEAN-CLAUDE POITRAS</h3>
 											{lang === "fr" ? (
 												<span>
 													{`« Le succès toujours grandissant de cette griffe, tant auprès du grand public que de l’élite du monde des affaires et du milieu artistique, est remarquable. Cette créatrice inspirée, doublée d’une femme d’affaires avisée, n’a pas fini de surprendre. »`}
@@ -303,7 +361,6 @@ const Result = () => {
 													{`"The ever-growing success of this brand, both among the general public and the elite of the business and artistic world, is remarkable. This inspired creator, coupled with a savvy businesswoman, is sure to surprise."`}
 												</span>
 											)}
-											<h3>JEAN-CLAUDE POITRAS</h3>
 										</div>
 									</div>
 								</SplideSlide>
@@ -311,7 +368,7 @@ const Result = () => {
 						</div>
 					</Splide>
 					<a
-						href="https://baralunettes.com/pages/boutiques-bar-a-lunettes"
+						href="https://baralunettes.as.me/?appointmentType=70119236"
 						target="_blank"
 						className="btn-primary"
 					>
@@ -321,7 +378,7 @@ const Result = () => {
 						<Arrow color="#ffffff" />
 					</a>
 					<a
-						href="https://baralunettes.as.me/schedule/68ef6492/appointment/40317996/calendar/10722194?appointmentTypeIds[]=40317996"
+						href="https://baralunettes.as.me/?appointmentType=40317996"
 						target="_blank"
 						className="btn-secondary"
 					>
