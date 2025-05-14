@@ -308,7 +308,17 @@
               letter-spacing: 0.2px;
               color: var(--color-primary);
               text-align: center;
-              margin-bottom:22px;
+              margin-bottom:5px;
+            }
+            & small {
+              font-family:var(--font-family-secondary);
+              font-size:13px;
+              font-weight: var(--font-weight-normal);
+              letter-spacing: 0.2px;
+              color: var(--color-primary);
+              text-align: center;
+              margin-bottom:14px;
+              margin-bottom:23px;
             }
             & svg{
               margin-bottom:14px;
